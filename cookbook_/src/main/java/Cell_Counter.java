@@ -35,7 +35,7 @@ public class Cell_Counter implements PlugInFilter{
     } // no image...
     else if (imp1.getStackSize() == 1) {
       ImageProcessor ip = imp1.getProcessor();
-      ip.setRoi(null);
+      ip.setRoi((Roi) null);
       ip = ip.crop();
       ImagePlus img = new ImagePlus("Counter Window - "+imp1.getTitle(), ip);
       CustomCanvas cc = new CustomCanvas(img);
@@ -49,7 +49,7 @@ public class Cell_Counter implements PlugInFilter{
       ImageStack stack2 = imp1.createEmptyStack();
       for (int i = 1; i <= size; i++){
 	ImageProcessor ip = stack.getProcessor(i);
-        ip.setRoi(null);
+        ip.setRoi((Roi) null);
         ip = ip.crop();
 	stack2.addSlice(stack.getSliceLabel(i), ip);
       }
