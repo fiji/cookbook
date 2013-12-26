@@ -13,7 +13,7 @@
 
 	<groupId>nl.uu.isi.bij</groupId>
 	<artifactId>bij</artifactId>
-	<version>20050922</version>
+	<version>20140108-SNAPSHOT</version>
 
 	<name>Bio-medical imaging in Java</name>
 	<description>Biomedical imaging software, manuals, documentation and presentations. Most are implemented using ImageJ, the image processing program from NIH written by Wayne Rasband.</description>
