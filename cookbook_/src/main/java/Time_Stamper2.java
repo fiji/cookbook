@@ -21,7 +21,7 @@ public class Time_Stamper2 implements PlugInFilter {
 
         public int setup(String arg, ImagePlus imp) {
                 this.imp = imp;
-                IJ.register(Time_Stamper.class);
+                IJ.register(Time_Stamper2.class);
                 return DOES_ALL+DOES_STACKS+STACK_REQUIRED;
         }
 
