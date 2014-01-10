@@ -27,14 +27,14 @@ public class Open_Sequence_As_Stack
         if(name == null)
             return;
         GenericDialog gd = new GenericDialog("Number of images", IJ.getInstance());
-        gd.addNumericField("Number: ", _$6317, 0);
+        gd.addNumericField("Number: ", imageCount, 0);
         gd.showDialog();
         boolean canceled = gd.wasCanceled();
         if(canceled)
             return;
-        _$6317 = (int)gd.getNextNumber();
+        imageCount = (int)gd.getNextNumber();
         if(IJ.debugMode)
-            IJ.write("SetOpener: " + directory + " (" + _$6317 + " files)");
+            IJ.write("SetOpener: " + directory + " (" + imageCount + " files)");
         ImagePlus imp = (new Opener()).openImage(directory, name);
         if(imp == null)
         {
@@ -64,7 +64,7 @@ public class Open_Sequence_As_Stack
         String sExtension = name.substring(end, sb.length() - 1);
         String sPrefix = name.substring(0, start);
         Integer iv = new Integer(sNumeric);
-        for(int i = 0; i < _$6317; i++)
+        for(int i = 0; i < imageCount; i++)
         {
             String s = Integer.toString(i + iv.intValue() + 0x5f5e100);
             String n = sPrefix + s.substring(s.length() - (end - start) - 1, s.length()) + sExtension;
@@ -96,7 +96,6 @@ public class Open_Sequence_As_Stack
         imp.show();
     }
 
-    private static String _$6308 = null;
-    private static int _$6317 = 20;
+    private static int imageCount = 20;
 
 }

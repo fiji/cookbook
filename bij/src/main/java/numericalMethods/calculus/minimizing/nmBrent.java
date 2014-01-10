@@ -42,9 +42,9 @@ public final class nmBrent implements Serializable
         ITMAX = v;
     }
 
-    private static final double _$15746(double a, double b)
+    private static final double copySign(double value, double signDonor)
     {
-        return b <= 0 ? -Math.abs(a) : Math.abs(a);
+        return signDonor <= 0 ? -Math.abs(value) : Math.abs(value);
     }
 
     public static final void search(double t[], double X[], nmDoubleValued f, double tol)
@@ -99,13 +99,13 @@ public final class nmBrent implements Serializable
                     d = p / q;
                     u = x + d;
                     if (u - a < tol2 || b - u < tol2)
-                        d = _$15746(tol1, xm - x);
+                        d = copySign(tol1, xm - x);
                 }
             } else
             {
                 d = 0.38196600000000003D * (e = x < xm ? b - x : a - x);
             }
-            F.setDoubleParameter(u = Math.abs(d) < tol1 ? x + _$15746(tol1, d) : x + d);
+            F.setDoubleParameter(u = Math.abs(d) < tol1 ? x + copySign(tol1, d) : x + d);
             double fu = f.getDoubleValue();
             if (fu <= fx)
             {

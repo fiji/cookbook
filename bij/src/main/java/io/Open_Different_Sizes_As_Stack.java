@@ -148,8 +148,4 @@ public class Open_Different_Sizes_As_Stack
         }
         IJ.register(io.Open_Different_Sizes_As_Stack.class);
     }
-
-    private static String _$6308 = null;
-    private final boolean _$3816 = true;
-
 }
