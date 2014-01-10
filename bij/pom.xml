@@ -19,11 +19,20 @@
 	<description>Biomedical imaging software, manuals, documentation and presentations. Most are implemented using ImageJ, the image processing program from NIH written by Wayne Rasband.</description>
 	<url>http://webscreen.ophth.uiowa.edu/bij/</url>
 
+	<properties>
+		<jama.version>1.0.3</jama.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
 			<version>${imagej1.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.nist.math</groupId>
+			<artifactId>jama</artifactId>
+			<version>${jama.version}</version>
 		</dependency>
 	</dependencies>
 

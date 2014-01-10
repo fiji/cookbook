@@ -28,7 +28,12 @@ import bijnum.BIJmi;
 public class RegisterMI extends Register
 {
 
-    public RegisterMI(float[] reference, int width)
+	public RegisterMI()
+	{
+		this(null, 0, null);
+	}
+
+	public RegisterMI(float[] reference, int width)
     {
     	this(reference, width, null);
     }
