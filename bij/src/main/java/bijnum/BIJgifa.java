@@ -1,6 +1,4 @@
 package bijnum;
-import java.util.*;
-import ij.*;
 /**
  * Implementation of GIFA (generalized indicator function approach).
  * Does a maximization of images with maximum signal power and signal to noise ratio.

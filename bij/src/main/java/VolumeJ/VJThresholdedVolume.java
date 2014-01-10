@@ -1,5 +1,8 @@
 package VolumeJ;
-import volume.*;
+import volume.Volume;
+import volume.VolumeFloat;
+import volume.VolumeRGB;
+import volume.VolumeShort;
 
 /**
  * This class creates thresholded (binary) volumes of any type of Volume.

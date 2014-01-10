@@ -1,5 +1,8 @@
 package VolumeJ;
-import volume.*;
+import volume.Volume;
+import volume.VolumeFloat;
+import volume.VolumeRGB;
+import volume.VolumeShort;
 
 /**
  * This class implements trilinear voxel interpolation and voxel gradient interpolation.

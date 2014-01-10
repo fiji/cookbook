@@ -1,6 +1,5 @@
 package VolumeJ;
-import ij.*;
-import volume.*;
+import volume.Volume;
 
 /**
  * This class is a set of projections of an object.

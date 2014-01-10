@@ -1,8 +1,9 @@
 package VolumeJ;
-import volume.*;
 // Should be removed, still needs ImageStack and ImageProcessor.
-import ij.*;
-import ij.process.*;
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
+import volume.Volume;
 
 /**
  * VJBInaryShell.

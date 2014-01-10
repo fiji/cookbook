@@ -1,6 +1,5 @@
 package volume;
-import bijnum.*;
-import ij.*;
+import ij.IJ;
 /**
  * Plugin containing methods to equalize imageas and volumes.
  * It is mainly useful to correct vignetting, i.e. anisotropic nonlinear illumination differences over the retinal image.

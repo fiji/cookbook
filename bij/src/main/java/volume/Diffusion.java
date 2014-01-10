@@ -1,7 +1,9 @@
 package volume;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.GenericDialog;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 
 /**
  * This is a class that implements nonlinear diffusion in 2D.

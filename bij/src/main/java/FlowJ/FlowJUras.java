@@ -1,6 +1,11 @@
 package FlowJ;
-import ij.*;
-import volume.*;
+import ij.IJ;
+import ij.ImageStack;
+import volume.Beaudetx;
+import volume.CentralDiff;
+import volume.Gaussian;
+import volume.Kernel1D;
+import volume.VolumeFloat;
 
 /*
 	  This class implements the Uras optical flow algorithm.

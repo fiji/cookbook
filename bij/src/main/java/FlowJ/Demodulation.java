@@ -1,5 +1,5 @@
 package FlowJ;
-import volume.*;
+import volume.Kernel1D;
 
 
 /*

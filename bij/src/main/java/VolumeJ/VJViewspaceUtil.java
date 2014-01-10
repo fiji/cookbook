@@ -1,6 +1,5 @@
 package VolumeJ;
-import java.awt.*;
-import volume.*;
+import volume.Volume;
 
 /**
  * VJViewspaceUtil implements viewspace utility methods, that can be used to

@@ -1,7 +1,5 @@
 package FlowJ;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
+import java.awt.Color;
 
 /**
  * This is a class that implements 2D and 3D Dynamic Color Mapping.

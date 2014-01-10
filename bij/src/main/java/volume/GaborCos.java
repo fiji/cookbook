@@ -1,5 +1,5 @@
 package volume;
-import ij.*;
+import ij.IJ;
 
 /**
  * This class implements a Gabor (even) cosine wave 1d convolution kernel

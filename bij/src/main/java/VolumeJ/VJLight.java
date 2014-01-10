@@ -1,5 +1,4 @@
 package VolumeJ;
-import java.awt.*;
 
 /**
  * This class implements a volume rendering light, and adds to methods to manipulate the light.

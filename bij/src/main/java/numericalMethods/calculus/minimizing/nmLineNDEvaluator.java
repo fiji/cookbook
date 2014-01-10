@@ -1,6 +1,7 @@
 package numericalMethods.calculus.minimizing;
 
 import java.io.Serializable;
+
 import numericalMethods.function.nmDoubleArrayParametrized;
 import numericalMethods.function.nmDoubleValued;
 

@@ -8,6 +8,7 @@ package registration;
 import ij.IJ;
 import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
+
 import java.awt.Rectangle;
 import java.util.Vector;
 

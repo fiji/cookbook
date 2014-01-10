@@ -1,12 +1,19 @@
 package FlowJ;
-import java.awt.*;
-import java.io.*;
-import ij.*;
-import ij.gui.*;
-import ij.process.*;
-import volume.*;
-import ij.measure.*;
-import bijnum.*;
+import ij.IJ;
+import ij.ImageStack;
+import ij.gui.Roi;
+import ij.measure.Calibration;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
+
+import java.awt.Rectangle;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import volume.VolumeFloat;
 
 /**
  * This class implements 2D flow fields and methods (including reading and

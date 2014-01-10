@@ -1,7 +1,7 @@
 package FlowJ;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
+import ij.process.ImageProcessor;
+
+import java.awt.Color;
 /**
  * This class maps a quiver map of a flow field.
  *

@@ -1,5 +1,4 @@
 package volume;
-import ij.*;
 
 /**
  * This class implement a scale space Gaussian n-th order derivative 1d convolution kernel for separated convolutions.

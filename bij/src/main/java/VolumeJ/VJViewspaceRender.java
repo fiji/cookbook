@@ -1,6 +1,4 @@
 package VolumeJ;
-import java.awt.*;
-import volume.*;
 
 /**
  * VJViewspaceRender class. Implements viewspace rendering, where the volume is rendered

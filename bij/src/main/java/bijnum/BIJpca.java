@@ -1,6 +1,7 @@
 package bijnum;
-import java.util.*;
-import ij.*;
+import ij.IJ;
+
+import java.util.Date;
 /**
  * Principal component analysis (PCA) on 2-D sequences (ie. image sequences).
  * Image sequences are organized as matrix with each image as a column vector.

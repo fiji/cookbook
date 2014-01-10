@@ -6,8 +6,6 @@
 package knn;
 
 import ij.process.ColorProcessor;
-import ij.process.ImageProcessor;
-import java.io.PrintStream;
 import volume.Hessian;
 
 // Referenced classes of package knn:

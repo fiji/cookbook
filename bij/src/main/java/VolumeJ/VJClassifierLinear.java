@@ -1,7 +1,4 @@
 package VolumeJ;
-import java.awt.*;
-import ij.*;
-import ij.gui.*;
 
 /**
  * This class implements a linear ramp classification function with indexing.

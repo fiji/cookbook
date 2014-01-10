@@ -1,5 +1,5 @@
 package volume;
-import ij.*;
+import ij.IJ;
 
 /**
  * This class is the generic type for all 3D kernels.

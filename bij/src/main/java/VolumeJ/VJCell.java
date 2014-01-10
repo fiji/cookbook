@@ -1,5 +1,5 @@
 package VolumeJ;
-import volume.*;
+import volume.Volume;
 
 /**
  * VJCell.

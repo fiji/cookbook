@@ -1,9 +1,10 @@
 package VolumeJ;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
-import ij.io.*;
-import volume.*;
+import ij.IJ;
+import ij.process.ByteProcessor;
+import ij.process.ColorProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
+import volume.Volume;
 
 /**
  * VJRenderView class implements a shell for rendering one or more views of a volume

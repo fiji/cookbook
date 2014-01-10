@@ -1,7 +1,12 @@
 package volume;
-import java.io.*;
-import ij.*;
-import ij.gui.*;
+import ij.IJ;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * This is a class that implements reading and writing on float volumes.

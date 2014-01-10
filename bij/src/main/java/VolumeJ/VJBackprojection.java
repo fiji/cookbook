@@ -1,12 +1,11 @@
 package VolumeJ;
 
-import java.awt.*;
-import ij.*;
-import volume.*;
-import ij.gui.*;
-import ij.process.*;
-import ij.measure.*;
-import ij.plugin.PlugIn;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.measure.Calibration;
+import volume.VolumeFloat;
 
 /**
  * VJBackprojection. Performs inverse Radon transform on sequence of projection images at

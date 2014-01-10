@@ -1,5 +1,4 @@
 package bijnum;
-import java.lang.Math.*;
 /**
   * This class implements useful linear and polynomial regression
   * from

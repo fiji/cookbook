@@ -1,6 +1,5 @@
 package FlowJ;
-import ij.process.*;
-import ij.*;
+import ij.process.ImageProcessor;
 
 /**
 * This class is the superclass for the OF display mappers.

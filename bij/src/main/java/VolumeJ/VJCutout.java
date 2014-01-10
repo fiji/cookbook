@@ -1,9 +1,6 @@
 package VolumeJ;
-import java.awt.*;
-import ij.*;
-import ij.gui.*;
-import ij.process.*;
-import volume.*;
+import ij.IJ;
+import volume.Volume;
 
 /**
  * VJCutout. Implements cutouts: slice views in a volume rendering.

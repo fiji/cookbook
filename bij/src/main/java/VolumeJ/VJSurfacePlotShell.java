@@ -1,5 +1,7 @@
 package VolumeJ;
-import volume.*;
+import volume.Gaussian;
+import volume.Volume;
+import volume.VolumeShort;
 
 /**
  * This class implements utility for surface plotting.

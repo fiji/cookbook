@@ -1,5 +1,5 @@
 package volume;
-import bijnum.*;
+import bijnum.BIJmatrix;
 
 /**
  * This class implements computing the Hessian tensor matrix of an image, and computing the determinant

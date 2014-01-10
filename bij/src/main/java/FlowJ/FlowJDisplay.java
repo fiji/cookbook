@@ -1,9 +1,8 @@
 package FlowJ;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
-import volume.*;
-import VolumeJ.*;
+import ij.IJ;
+import ij.process.ByteProcessor;
+import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
 
 /**
  * OFDisplay class implements the 2D display of 2D flow fields in different formats.

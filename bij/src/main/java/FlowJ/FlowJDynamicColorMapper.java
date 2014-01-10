@@ -1,6 +1,5 @@
 package FlowJ;
-import ij.*;
-import ij.process.*;
+import ij.process.ImageProcessor;
 /*
 	 This class maps dynamic color of a flow field.
 

@@ -1,5 +1,4 @@
 package bijnum;
-import java.lang.Math.*;
 /**
   * This class implements useful numerical functions from
   * Press, Flannery, Teukolsky, Vetterling, Numerical Recipes in C 2nd ed, Cambridge University Press, 1986

@@ -5,13 +5,15 @@
 
 package io;
 
-import ij.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
 import ij.io.OpenDialog;
 import ij.io.Opener;
 import ij.plugin.PlugIn;
 import ij.process.FloatProcessor;
-import ij.process.ImageProcessor;
 import ij.util.StringSorter;
+
 import java.io.File;
 
 public class Open_Different_Sizes_As_Stack
@@ -26,7 +28,6 @@ public class Open_Different_Sizes_As_Stack
     {
         int height;
         int width = height = 0;
-        int type = -1;
         OpenDialog od = new OpenDialog("Open Different Sizes As Stack", arg);
         String directory = od.getDirectory();
         String name = od.getFileName();

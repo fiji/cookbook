@@ -5,8 +5,10 @@
 
 package knn;
 
+import volume.Convolver;
+import volume.DoG2D;
+import volume.Transformer;
 import bijnum.BIJmatrix;
-import volume.*;
 
 // Referenced classes of package knn:
 //            StereoFilterBank, Feature

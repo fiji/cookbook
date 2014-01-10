@@ -1,6 +1,5 @@
 package VolumeJ;
-import java.awt.*;
-import volume.*;
+import volume.VolumeRGB;
 
 /**
  * VJRender class. This subclass of VJRenderer implements the standard classical renderer,

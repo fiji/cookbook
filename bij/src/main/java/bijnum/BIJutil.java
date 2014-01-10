@@ -1,11 +1,20 @@
 package bijnum;
-import java.io.*;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import volume.*;
-import bijnum.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.Roi;
+import ij.process.ByteProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
+import ij.process.ShortProcessor;
+
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.io.BufferedOutputStream;
+import java.io.CharArrayWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Utilities to link BIJ things to ImageJ.

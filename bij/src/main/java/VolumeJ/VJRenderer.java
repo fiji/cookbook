@@ -1,6 +1,5 @@
 package VolumeJ;
-import java.awt.*;
-import volume.*;
+import volume.Volume;
 
 /**
  * VJRenderer class implements the context and support methods for Volume Rendering.

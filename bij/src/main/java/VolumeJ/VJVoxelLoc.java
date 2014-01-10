@@ -1,5 +1,4 @@
 package VolumeJ;
-import volume.*;
 
 /**
  * This class defines a voxel location for interpolation and rendering.

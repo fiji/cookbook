@@ -1,5 +1,4 @@
 package VolumeJ;
-import volume.*;
 
 /**
  * VJZBuffer.

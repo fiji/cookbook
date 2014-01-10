@@ -1,6 +1,5 @@
 package bijnum;
-import java.awt.Rectangle;
-import ij.*;
+import ij.IJ;
 
 /**
  * This class implements the fast Hartley transform on matrices and vectors (real float matrices).

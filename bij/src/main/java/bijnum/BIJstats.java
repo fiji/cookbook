@@ -1,10 +1,8 @@
 package bijnum;
 
-import java.util.*;
-import ij.*;
-import ij.gui.*;
-import volume.*;
-import bijnum.*;
+import ij.IJ;
+
+import java.util.Random;
 
 /**
  * BIJ statistical methods inherited from MatLab. Syntax is as close as possible to matlab.

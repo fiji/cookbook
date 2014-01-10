@@ -1,6 +1,4 @@
 package FlowJ;
-import java.awt.*;
-import ij.*;
 
 /*
 	 This is a exception class for optical flow routines.

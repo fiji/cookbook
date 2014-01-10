@@ -1,9 +1,5 @@
 package FlowJ;
-import ij.*;
-import ij.process.*;
-import volume.*;
-import VolumeJ.*;
-import bijnum.*;
+import bijnum.BIJmatrix;
 
 /**
 	 This class implements spot noise displaying of flow fields.

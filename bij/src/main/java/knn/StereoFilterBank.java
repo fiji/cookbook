@@ -5,13 +5,16 @@
 
 package knn;
 
-import bijfit.DesignMatrixLinear;
-import bijfit.GeneralLinearLeastSquares;
-import bijnum.*;
 import ij.ImagePlus;
 import ij.io.FileSaver;
-import java.io.PrintStream;
-import volume.*;
+import volume.Convolver;
+import volume.GaussianDerivative;
+import volume.Transformer;
+import bijfit.DesignMatrixLinear;
+import bijfit.GeneralLinearLeastSquares;
+import bijnum.BIJfit;
+import bijnum.BIJmatrix;
+import bijnum.BIJutil;
 
 // Referenced classes of package knn:
 //            Feature

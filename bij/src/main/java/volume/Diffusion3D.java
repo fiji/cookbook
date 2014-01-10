@@ -1,6 +1,8 @@
 package volume;
-import ij.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.GenericDialog;
 
 /**
  * This is a class that implements nonlinear diffusion in 2D, 3D and 4D.

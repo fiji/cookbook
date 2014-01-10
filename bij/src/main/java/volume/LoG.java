@@ -1,5 +1,4 @@
 package volume;
-import ij.*;
 
 /**
  * This is a 2D Laplacian of Gaussian convolution kernel.

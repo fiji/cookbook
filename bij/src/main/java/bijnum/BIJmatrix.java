@@ -1,7 +1,5 @@
 package bijnum;
-import java.awt.*;
-
-import ij.*;
+import ij.IJ;
 
 /**
  * Implements methods for large (by necessity, float) matrices, including covariance of matrix,

@@ -1,12 +1,5 @@
 package bijnum;
 
-import java.io.*;
-import ij.*;
-import ij.process.*;
-import java.awt.*;
-import ij.gui.*;
-import volume.*;
-import bijnum.*;
 
 /**
  * k Nearest Neighborhood (brute-force) implementation.

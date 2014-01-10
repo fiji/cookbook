@@ -1,6 +1,5 @@
 package FlowJ;
-import ij.*;
-import ij.process.*;
+import ij.process.ImageProcessor;
 /**
  * This class maps a flow field in colored spotnoise format.
  *

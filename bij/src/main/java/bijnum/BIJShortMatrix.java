@@ -1,6 +1,4 @@
 package bijnum;
-import java.awt.*;
-import ij.*;
 
 /**
  * Implements methods for large short matrices.

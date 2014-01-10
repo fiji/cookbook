@@ -1,7 +1,9 @@
 package volume;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
+
+import java.awt.Color;
 /**
  * This class implements RGB vector volumes.
  *

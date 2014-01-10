@@ -1,6 +1,5 @@
 package bijnum;
-import ij.*;
-import java.io.*;
+import ij.IJ;
 
 /**
  * This class implements the jacobi function as a Java class.

@@ -1,9 +1,9 @@
 package VolumeJ;
-import java.awt.*;
-import ij.*;
-import ij.process.*;
-import ij.io.*;
-import volume.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.io.FileSaver;
+import ij.process.ImageProcessor;
 
 /**
  * This subclass of VJRenderView implements cine mode rendering.

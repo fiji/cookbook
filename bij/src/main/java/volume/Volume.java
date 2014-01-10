@@ -1,6 +1,4 @@
 package volume;
-import java.awt.*;
-import java.io.*;
 /**
  * This is an abstract super-class to implement volumes.
  * Volumes are 3-D ordered structures that are indexed by three-parameters. The values in a volume can consist

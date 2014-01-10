@@ -1,10 +1,10 @@
 package VolumeJ;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import ij.gui.*;
-import ij.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.ImageCanvas;
+
+import java.awt.event.MouseEvent;
 /**
  * This class is an interactive rendering viewer.
  * The GUI allows the rendering to be scaled and rotated using the mouse.

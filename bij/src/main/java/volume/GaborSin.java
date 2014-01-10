@@ -1,5 +1,5 @@
 package volume;
-import ij.*;
+import ij.IJ;
 
 /**
  * This class implements a Gabor (odd) sine wave 1d convolution kernel

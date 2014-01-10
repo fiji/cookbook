@@ -7,7 +7,6 @@ package bijfit;
 
 import Jama.Matrix;
 import bijnum.BIJutil;
-import java.io.PrintStream;
 
 // Referenced classes of package bijfit:
 //            DesignMatrixLinear, DesignMatrix

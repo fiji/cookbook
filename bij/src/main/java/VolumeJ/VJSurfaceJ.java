@@ -1,22 +1,32 @@
 package VolumeJ;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.io.*;
-import java.awt.datatransfer.*;
-import java.lang.reflect.*;
-import java.text.DecimalFormat;
-import java.awt.Color;
-import java.awt.Frame;
-import java.applet.Applet;
-import ij.*;
-import ij.process.*;
-import ij.measure.*;
-import ij.gui.*;
-import ij.io.*;
-import volume.*;
-import ij.plugin.frame.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GUI;
+import ij.io.OpenDialog;
+import ij.measure.Calibration;
+import ij.process.ByteProcessor;
+
+import java.awt.AWTEvent;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextField;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+import java.awt.event.KeyListener;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import volume.Volume;
+import volume.VolumeShort;
 /**
  * This class offers SurfaceJ, a surface plotting plugin based on VJ.<br>
  *

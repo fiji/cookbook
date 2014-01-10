@@ -1,6 +1,4 @@
 package bijnum;
-import ij.*;
-import java.io.*;
 
 /**
  * This class implements Powell's multidimensional optimization.

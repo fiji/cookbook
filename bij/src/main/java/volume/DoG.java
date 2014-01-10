@@ -1,5 +1,4 @@
 package volume;
-import ij.*;
 
 /**
  * This is a 1D Difference of Gaussian convolution kernel.

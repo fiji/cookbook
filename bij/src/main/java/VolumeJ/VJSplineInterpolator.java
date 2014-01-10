@@ -1,6 +1,4 @@
 package VolumeJ;
-import ij.*;
-import volume.*;
 
 /**
  * This class implements cubic spline interpolation

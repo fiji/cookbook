@@ -1,5 +1,4 @@
 package volume;
-import ij.*;
 
 /**
  * This class is the generic type for all 1D kernels.

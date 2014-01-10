@@ -1,9 +1,5 @@
 package VolumeJ;
-import java.awt.*;
-import ij.*;
-import ij.gui.*;
-import ij.plugin.*;
-import java.io.*;
+import java.awt.Color;
 
 /**
  * This class implements the Levoy tent classification function with indexing.

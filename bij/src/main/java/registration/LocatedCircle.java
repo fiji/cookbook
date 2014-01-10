@@ -5,13 +5,16 @@
 
 package registration;
 
-import bijnum.BIJutil;
 import ij.ImagePlus;
 import ij.gui.OvalRoi;
-import ij.gui.Roi;
-import ij.process.*;
+import ij.process.ByteProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
+
 import java.util.Enumeration;
 import java.util.Vector;
+
+import bijnum.BIJutil;
 
 public class LocatedCircle
 {

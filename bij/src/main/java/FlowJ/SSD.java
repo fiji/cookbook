@@ -1,6 +1,6 @@
 package FlowJ;
-import ij.*;
-import volume.*;
+import ij.IJ;
+import volume.VolumeFloat;
 
 
 /*

@@ -1,10 +1,11 @@
 package volume;
-import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
-import ij.*;
-import ij.gui.*;
-import ij.process.*;
+import ij.IJ;
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.ColorProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
+import ij.process.ShortProcessor;
 
 /**
  * This is a class that implements a float hyper (4D) volumes and operations including

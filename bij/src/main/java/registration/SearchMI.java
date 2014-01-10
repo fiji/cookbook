@@ -1,11 +1,11 @@
 package registration;
 
+import ij.IJ;
 import numericalMethods.function.nmDoubleArrayParametrized;
 import numericalMethods.function.nmDoubleValued;
+import volume.Transformer;
 import bijnum.BIJmatrix;
 import bijnum.BIJmi;
-import ij.IJ;
-import volume.Transformer;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

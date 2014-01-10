@@ -1,5 +1,4 @@
 package volume;
-import bijnum.*;
 
 /**
  * This class implements convolution operations on image planes and volumes.

@@ -1,6 +1,6 @@
 package VolumeJ;
-import ij.*;
-import volume.*;
+import volume.Volume;
+import volume.VolumeRGB;
 
 /**
  * This class is the abstract class for all <code>volume</code> interpolators and defines the methods

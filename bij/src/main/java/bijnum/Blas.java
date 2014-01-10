@@ -150,7 +150,6 @@ through n.
 */
 
 package bijnum;
-import bijnum.*;
 
 public class Blas extends Object {
 

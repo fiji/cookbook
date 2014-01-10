@@ -1,5 +1,5 @@
 package volume;
-import ij.*;
+import ij.IJ;
 
 /**
  * This is a 1D separated 0-th order Gaussian convolution kernel.

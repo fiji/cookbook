@@ -1,7 +1,7 @@
 package bijfit;
 
-import bijnum.BIJmatrix;
 import ij.IJ;
+import bijnum.BIJmatrix;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

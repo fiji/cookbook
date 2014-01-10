@@ -1,8 +1,20 @@
  package FlowJ;
-import ij.*;
-import ij.process.*;
-import volume.*;
-import bijnum.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import volume.CentralDiff;
+import volume.Gaussian;
+import volume.Gaussian2D;
+import volume.GaussianDerivative;
+import volume.Kernel;
+import volume.Kernel1D;
+import volume.Kernel2D;
+import volume.Kernel3D;
+import volume.Sobel;
+import volume.Sobel3D;
+import volume.VolumeFloat;
+import bijnum.BIJJacobi;
+import bijnum.BIJmatrix;
 
 /**
  * This is a class that implements the Lucas and Kanade optical flow algorithm.

@@ -1,5 +1,6 @@
 package VolumeJ;
-import bijnum.*;
+import bijnum.BIJmatrix;
+import bijnum.BIJtransform;
 /**
  * This class implements a transformation matrix and 3D transformation methods on it.
  * It also implements the tranformations necessary for the shear-warp rendering algorithm

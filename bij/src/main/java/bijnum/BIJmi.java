@@ -1,12 +1,6 @@
 package bijnum;
 
-import java.io.*;
-import ij.*;
-import ij.process.*;
-import java.awt.*;
-import ij.gui.*;
-import volume.*;
-import bijnum.*;
+import ij.IJ;
 
 /**
  * Mutual infromation processing  routines.

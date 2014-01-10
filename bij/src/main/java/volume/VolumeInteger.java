@@ -1,7 +1,9 @@
 package volume;
-import java.io.*;
-import ij.*;
-import ij.process.*;
+import ij.IJ;
+import ij.ImageStack;
+import ij.process.ByteProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 
 /**
  * This class implements int volumes and operations including

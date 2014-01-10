@@ -5,14 +5,16 @@
 
 package registration;
 
-import bijfit.Maximum;
-import bijnum.*;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.io.FileSaver;
 import ij.process.ByteProcessor;
 import ij.process.FloatProcessor;
 import volume.Hessian;
+import bijfit.Maximum;
+import bijnum.BIJfht;
+import bijnum.BIJmatrix;
+import bijnum.BIJutil;
 
 // Referenced classes of package registration:
 //            Register

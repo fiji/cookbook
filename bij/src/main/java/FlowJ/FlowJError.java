@@ -1,12 +1,14 @@
 package FlowJ;
-import java.awt.*;
-import ij.*;
-import ij.gui.*;
-import ij.process.*;
-import bijnum.*;
-import java.awt.datatransfer.*;
-import java.awt.event.*;
-import java.io.*;
+import ij.IJ;
+import ij.gui.Roi;
+import ij.process.ColorProcessor;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Rectangle;
+import java.io.PrintWriter;
+
+import bijnum.BIJmatrix;
 
 /*
 	  This class implements statistics computations on flow fields and comparisons

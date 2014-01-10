@@ -1,15 +1,37 @@
 package FlowJ;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.awt.event.*;
-import java.io.*;
-import java.awt.datatransfer.*;
-import java.util.*;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import volume.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.GUI;
+import ij.gui.ImageCanvas;
+import ij.gui.ImageWindow;
+import ij.gui.Roi;
+import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
+
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.Choice;
+import java.awt.Color;
+import java.awt.FileDialog;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextField;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.io.CharArrayWriter;
+import java.io.PrintWriter;
+import java.util.Vector;
 
 /**
  * This class links the FlowJ classes to the ImageJ interface.<br>

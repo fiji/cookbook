@@ -1,8 +1,6 @@
 package VolumeJ;
-import java.awt.*;
-import volume.*;
-import ij.process.*;
-import ij.ImagePlus;
+import volume.Volume;
+import volume.VolumeRGB;
 
 /**
  * VJIsosurfaceRender.
