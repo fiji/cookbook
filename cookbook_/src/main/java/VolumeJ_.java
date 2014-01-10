@@ -154,7 +154,7 @@ public class VolumeJ_ implements PlugIn
 	    //Start rendering.
 	    rs.start();
 	  }
-	  catch (Exception e) { IJ.write(e.getMessage()); }
+	  catch (Exception e) { IJ.log(e.getMessage()); }
       }
 }
 

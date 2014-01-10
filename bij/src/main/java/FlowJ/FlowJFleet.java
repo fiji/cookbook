@@ -187,7 +187,7 @@ public class FlowJFleet
 
 				filter = new float[tuning.length][3]; // x, y, t
 
-				IJ.write("Fleet: Gabor filters (sigmas="+sigmas+", sigmat="+sigmat+")");
+				IJ.log("Fleet: Gabor filters (sigmas="+sigmas+", sigmat="+sigmat+")");
 				final float mu = 1;
 				final float beta = 0.8f;
 				final float base = 2;
@@ -211,7 +211,7 @@ public class FlowJFleet
                                         filter[n][0] = (float) k1;    // x
                                         filter[n][1] = (float) -k2;   // y
                                         filter[n][2] = (float) k3;    // t
-                                        if (debug)   IJ.write("<"+n+">: wavelength(s) "+IJ.d2s(wavelengths,2)
+                                        if (debug)   IJ.log("<"+n+">: wavelength(s) "+IJ.d2s(wavelengths,2)
 						  +" wavelength(t) "+IJ.d2s(wavelengtht,2)+" speed "+IJ.d2s(speed, 2)
 						  +" dir "+IJ.d2s(theta, 2)+" "+IJ.d2s(filter[n][0],2)+" "+IJ.d2s(filter[n][1],2)
 						  +" "+IJ.d2s(filter[n][2], 2));
@@ -231,7 +231,7 @@ public class FlowJFleet
                                                          filterMax = amplitude;
                                   }
                           }
-                if (debug) IJ.write("<"+n+"> max amplitude: "+IJ.d2s(filterMax, 5)+" maxamp " +IJ.d2s(Math.max(filterMax, maxamp),5));
+                if (debug) IJ.log("<"+n+"> max amplitude: "+IJ.d2s(filterMax, 5)+" maxamp " +IJ.d2s(Math.max(filterMax, maxamp),5));
                 return Math.max(filterMax, maxamp);
 	  }
 	   /************************************************************
@@ -265,7 +265,7 @@ public class FlowJFleet
 
 			validNormals = failedTau = failedAmp = 0;
 
-			IJ.write("Fleet components: response > "+maxampFraction
+			IJ.log("Fleet components: response > "+maxampFraction
 
 				+"; frequency/amplitude < "+tau+"(tau)");
 
@@ -292,8 +292,8 @@ public class FlowJFleet
 				  Dphi((VolumeFloat) vReal, (VolumeFloat) vImag, phi, sigmak_tau_2, ampthresh, n);
 				  computeNormal(phi, n);
 			}
-			IJ.write(""+validNormals+" valid components ("+(width*height*filter.length)+")");
-			IJ.write("failed amplitude test "+failedAmp+", failed amp/freq test "+failedTau);
+			IJ.log(""+validNormals+" valid components ("+(width*height*filter.length)+")");
+			IJ.log("failed amplitude test "+failedAmp+", failed amp/freq test "+failedTau);
 	  }
 	  /************************************************************
 
@@ -462,7 +462,7 @@ public class FlowJFleet
 			int total=0; int full=0;
 			this.conditionLimit = conditionLimit;
 			this.residualThreshold = residualThreshold;
-			IJ.write("Fleet: full velocities cond nr < "+IJ.d2s(conditionLimit,2)
+			IJ.log("Fleet: full velocities cond nr < "+IJ.d2s(conditionLimit,2)
 				  +"; residual < "+residualThreshold);
 			System.gc();
 			for (int y = 0; y < height; y++)
@@ -498,7 +498,7 @@ public class FlowJFleet
 														vn[count++] = size;
 												  if (debug && x==60 && y==58 && l==0 && m == 0)
 												  {
-														IJ.write("full: normal<"+n+">["+(y+m)+"]["+(x+l)+"]/size: "+IJ.d2s(nv[0],5)+","+IJ.d2s(nv[1],5)
+														IJ.log("full: normal<"+n+">["+(y+m)+"]["+(x+l)+"]/size: "+IJ.d2s(nv[0],5)+","+IJ.d2s(nv[1],5)
 														+" size "+IJ.d2s(size,5)+"("+m+", "+l+")");
 												  }
 												} // if
@@ -539,13 +539,13 @@ public class FlowJFleet
 				 } // for x
 			  } // for y
 			  density = (float) full/(float) total;
-			  IJ.write("Fleet failed computations:\n"
+			  IJ.log("Fleet failed computations:\n"
 					+"on residual: "+no_large_residuals
 					+"; ill conditioned: "+no_ill_conditioned
 					+"; on too few valid normal velocities: "+no_count
 					+"; invalid locations: "+no_notcomp);
 			  if (no_wronginverse > 0)
-					IJ.write("Invalid pseudoinverse calculations: "+no_wronginverse);
+					IJ.log("Invalid pseudoinverse calculations: "+no_wronginverse);
 	  }
 	  private float optimizeVelocity(int r, int n, float [][] J, float [] vn, float [][][] v, float [] product)
 	  /*

@@ -67,8 +67,8 @@ public class Copy_Pixel_Size implements PlugIn {
 			}
 		}
 		imp2.updateAndRepaintWindow();
-		//IJ.write("Calibration1:\n"+cal1.toString());
-		//IJ.write("Calibration2:\n"+cal2.toString());
+		//IJ.log("Calibration1:\n"+cal1.toString());
+		//IJ.log("Calibration2:\n"+cal2.toString());
 		return;
 	}
 	public boolean showDialog() {

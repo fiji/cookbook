@@ -216,7 +216,7 @@ public class BIJfht
 
         /** Row-column Fast Hartley Transform */
         void rc2DFHT(float[] x, boolean inverse, int maxN) {
-                //IJ.write("FFT: rc2DFHT (row-column Fast Hartley Transform)");
+                //IJ.log("FFT: rc2DFHT (row-column Fast Hartley Transform)");
                 for (int row=0; row<maxN; row++)
                         dfht3(x, row*maxN, inverse, maxN);
                 progress(0.4);
@@ -279,7 +279,7 @@ public class BIJfht
                         gpSize = 4;
                         numBfs = 2;
                         numGps = numGps / 2;
-                        //IJ.write("FFT: dfht3 "+Nlog2+" "+numGps+" "+numBfs);
+                        //IJ.log("FFT: dfht3 "+Nlog2+" "+numGps+" "+numBfs);
                         for (stage=2; stage<Nlog2; stage++) {
                                 for (gpNum=0; gpNum<numGps; gpNum++) {
                                         Ad0 = gpNum * gpSize * 2;

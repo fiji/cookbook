@@ -364,7 +364,7 @@ public class FlowJLucas
                                                                 mi = BIJmatrix.inverse(m);
                                                                 j = new BIJJacobi(m, true);
                                                                 //if (debug && ! BIJMatrix.checkinverse(m, mi))
-                                                                 //              IJ.write("inverse failure! det = "+BIJMatrix.determinant(m)+" "+x+", "+y);
+                                                                 //              IJ.log("inverse failure! det = "+BIJMatrix.determinant(m)+" "+x+", "+y);
                                                                  j.compute();
                                                                  // For debugging. Suppplied by Barron & Beauchemin
                                                                  //if (debug)	j.check(m);
@@ -390,7 +390,7 @@ public class FlowJLucas
                                                                        flow.set(x, y, ff[0], ff[1], true);
                                                                        normals++;
                                                                  }
-                                                          } catch (Exception e) { IJ.write("Inverse or Jacobi error "+e); }
+                                                          } catch (Exception e) { IJ.log("Inverse or Jacobi error "+e); }
                                                            total++;
                                                 } // if
                                   }  // for x

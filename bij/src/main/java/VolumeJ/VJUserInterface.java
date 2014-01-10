@@ -956,7 +956,7 @@ implements ActionListener, ClipboardOwner, ItemListener, KeyListener
 	 * @param s the String that will be output.
 	 */
 	static void write(String s)
-	{ if (IJ.getApplet() == null) IJ.write(s); else IJ.showStatus(s); }
+	{ if (IJ.getApplet() == null) IJ.log(s); else IJ.showStatus(s); }
 	/**
 	 * Writes a string to a status channel.
 	 * @param s the String that will be shown in the status window.

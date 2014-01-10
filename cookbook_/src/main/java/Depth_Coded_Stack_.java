@@ -54,7 +54,7 @@ public class Depth_Coded_Stack_ implements PlugIn
 		height = (int)gd.getNextNumber();
 		depth = (int)gd.getNextNumber();
 
-		IJ.write("Depth-coded stack (" + width + "x" + height + "x" + depth + ")");
+		IJ.log("Depth-coded stack (" + width + "x" + height + "x" + depth + ")");
 		ImageStack s = new ImageStack(width, height);
 		for (int i = 0; i < depth; i++) {
 			ImageProcessor ip = new ByteProcessor(width, height);

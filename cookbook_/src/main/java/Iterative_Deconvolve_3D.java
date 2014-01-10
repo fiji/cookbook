@@ -304,13 +304,13 @@ public class Iterative_Deconvolve_3D implements PlugIn{
 					}
 				}
 				float newMean = sumPixels/(bd*bh*bw);
-				if(logMean)IJ.write(Float.toString(newMean));
+				if(logMean)IJ.log(Float.toString(newMean));
 				double percentChange = changeThresh + 1;
 				if(oldMean != 0){
 					percentChange = Math.abs((newMean - oldMean)/oldMean);
 				}
 				if(termMean&&(percentChange < changeThresh)){
-					if(logMean)IJ.write("Automatically terminated after "+iter+" iterations.");
+					if(logMean)IJ.log("Automatically terminated after "+iter+" iterations.");
 					break;
 				}
 				oldMean = newMean;
@@ -698,7 +698,7 @@ public class Iterative_Deconvolve_3D implements PlugIn{
 			gpSize = 4;
 			numBfs = 2;
 			numGps = numGps / 2;
-			//IJ.write("FFT: dfht3 "+Nlog2+" "+numGps+" "+numBfs);
+			//IJ.log("FFT: dfht3 "+Nlog2+" "+numGps+" "+numBfs);
 			for (stage=2; stage<Nlog2; stage++) {
 				for (gpNum=0; gpNum<numGps; gpNum++) {
 					Ad0 = gpNum * gpSize * 2;

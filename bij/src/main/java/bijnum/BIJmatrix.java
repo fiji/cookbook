@@ -1187,18 +1187,18 @@ public class BIJmatrix
 	public static void test()
 	//throws Exception
 	{
-		IJ.write("Testing matrices.");
+		IJ.log("Testing matrices.");
 		float [][] h = { {1,2,3,4,5},{6,7,8,9,10} };
-		IJ.write("h = "+BIJutil.toString(h));
+		IJ.log("h = "+BIJutil.toString(h));
 		float [][] i = transpose(h);
-		IJ.write("i = "+BIJutil.toString(i));
+		IJ.log("i = "+BIJutil.toString(i));
 		float [][] j = mul(i, h);
-		IJ.write("i*h=j = "+BIJutil.toString(j));
+		IJ.log("i*h=j = "+BIJutil.toString(j));
 		float [][] k = mul(h, i);
-		IJ.write("h*i=k = "+BIJutil.toString(k));
+		IJ.log("h*i=k = "+BIJutil.toString(k));
 		BIJJacobi jac = new BIJJacobi(j);
 		jac.compute();
-		IJ.write(jac.toString());
+		IJ.log(jac.toString());
 	}
 	/**
 	 * Sort a vector and a matrix simultaneously based on the order of items in a third vector.
@@ -1433,29 +1433,29 @@ public class BIJmatrix
                              }
                       if (error)
                       {
-                                  IJ.write("Inverse failure\nJ matrix =");
+                                  IJ.log("Inverse failure\nJ matrix =");
                                   for(int i=0;i<m;i++)
                                   {
                                         String s = "";
                                         for(int j=0;j<n;j++)
                                               s += J[i][j]+"\t";
-                                        IJ.write(s);
+                                        IJ.log(s);
                                   }
-                                  IJ.write("JI matrix =");
+                                  IJ.log("JI matrix =");
                                   for(int i=0;i<m;i++)
                                   {
                                           String s = "";
                                           for(int j=0;j<n;j++)
                                                 s += JI[j][i]+"\t ";
-                                          IJ.write(s);
+                                          IJ.log(s);
                                   }
-                                  IJ.write("I matrix =");
+                                  IJ.log("I matrix =");
                                   for(int i=0;i<n;i++)
                                   {
                                           String s = "";
                                           for(int j=0;j<n;j++)
                                                 s += I[j][i]+"\t ";
-                                          IJ.write(s);
+                                          IJ.log(s);
                                   }
                       }
                       return (! error);

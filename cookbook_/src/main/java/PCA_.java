@@ -67,7 +67,7 @@ public class PCA_ implements PlugInFilter
         {
             CharArrayWriter c = new CharArrayWriter();
             e.printStackTrace(new PrintWriter(c));
-            IJ.write(c.toString());
+            IJ.log(c.toString());
         }
     }
 

@@ -125,7 +125,7 @@ public class VJCutout
                                 if (k < nearest[2] && nearest[2] <= center[2])
                                 {
                                         if (IJ.debugMode)
-                                                ij.IJ.write("nearest intersection "+
+                                                ij.IJ.log("nearest intersection "+
                                                         nearest[0]+","+nearest[1]+","+nearest[2]);
                                         // in front of the plane: show the value at the intersection.
                                         // determine the voxellocation of the intersection:

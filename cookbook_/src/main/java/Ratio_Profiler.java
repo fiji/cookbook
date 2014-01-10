@@ -41,7 +41,7 @@ boolean isAltKey =IJ.altKeyDown();
 		Rectangle r = imp.getRoi().getBoundingRect();
 
 		String units="";
-//IJ.write("x="+r.x+", y="+r.y+", width="+r.width+", height="+r.height);
+//IJ.log("x="+r.x+", y="+r.y+", width="+r.width+", height="+r.height);
 		sb.append(r.x+"x\t"+r.y+"y\t"+r.width+"w\t"+r.height+"h\n");
 		
 		float[] y = getZAxisProfile(roi);

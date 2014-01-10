@@ -219,7 +219,7 @@ public class Transformer
                 ImageProcessor regip = ip.duplicate();
                 int width = ip.getWidth();
                 int height = ip.getHeight();
-                //IJ.write("ImageProcessor "+regip.getClass().getName());
+                //IJ.log("ImageProcessor "+regip.getClass().getName());
                 if (ip instanceof ColorProcessor)
                 {
                         for (int y = 0; y < height; y++)

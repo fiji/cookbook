@@ -172,7 +172,7 @@ public class Jacobi
 			 z[ip] = 0;
 		 }
         if (i >= 50)
-            IJ.write("i >= "+i+" in jacobi");
+            IJ.log("i >= "+i+" in jacobi");
     }  // for
   } /* jacobi */
   public void sort()

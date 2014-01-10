@@ -71,7 +71,7 @@ public class VJViewerCanvas extends ImageCanvas
 		float roty = distanceToAngle(dy);
 		float rotx = distanceToAngle(dx);
 		if (! (renderView instanceof VJRenderViewInteractive))
-		        IJ.write("VJViewerCanvas error: renderView not initialize");
+		        IJ.log("VJViewerCanvas error: renderView not initialize");
 		// X-axis in volume is parellel to y-axis on viewing plane and vv.
 		renderView.rotateInPlane(roty, -rotx);
 	}

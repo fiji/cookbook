@@ -453,7 +453,7 @@ public class VolumeFloat extends Volume
 								for (int k = -kernel.halfwidth; k <= kernel.halfwidth; k++)
 							v[z+depth/2][y][x] += v1.v[z+v1.getDepth()/2+k][y][x]*kernel.k[k+kernel.halfwidth];
 				}
-		} catch(ArrayIndexOutOfBoundsException e) { IJ.write("array "+e
+		} catch(ArrayIndexOutOfBoundsException e) { IJ.log("array "+e
 					+" x,y,z "+x+","+y+","+z+"("
 					+" k "+kernel.halfwidth+": "+width+"x"+height+"x"+depth+ "?= "
 					+v1.getDepth()+"x"+v1.getHeight()+"x"+v1.getDepth()); }
@@ -468,7 +468,7 @@ public class VolumeFloat extends Volume
 		if (v1.getDepth() < 2)
 				IJ.error("convolvez: volume depth doesn't fit kernel");
 		if (v1.edge > edge) edge = v1.edge;
-                IJ.write("z: "+(-depth/2)+"index "+(-depth/2 + depth/2));
+                IJ.log("z: "+(-depth/2)+"index "+(-depth/2 + depth/2));
 		for (int z = -depth/2; z < (depth+1)/2; z++)
 		for (int y = 0; y < height; y++)
 		for (int x = 0; x < width; x++)

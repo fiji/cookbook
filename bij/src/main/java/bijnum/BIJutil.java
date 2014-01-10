@@ -124,7 +124,7 @@ public class BIJutil
                         a[i] = getFloatPixels(ipp.getPixels());
                         // (float []) (ipp.convertToFloat()).duplicate().getPixels();
                 }
-                }catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+                }catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
                 return a;
         }
         public static ImagePlus showVectorAsImage(float [] v, int width)
@@ -168,7 +168,7 @@ public class BIJutil
                                 ipp = ipp.resize((int) (width * scaleFactor), (int) (height * scaleFactor));
                         a = getFloatPixels(ipp.getPixels());
                 }
-                catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+                catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
                 return a;
         }
         /**
@@ -211,7 +211,7 @@ public class BIJutil
                         a = getFloatPixels(ipp.getPixels());
                         //(new ImagePlus("ip vectorFromImageStackRoi", ip)).show();
                 }
-                catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+                catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
                 return a;
         }
         /**
@@ -234,7 +234,7 @@ public class BIJutil
                         ipp = ipp.crop();
                         a = (float []) ipp.getPixels();
                 }
-                catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+                catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
                 return a;
         }
         /**
@@ -292,7 +292,7 @@ public class BIJutil
 			          ipp = ipp.resize((int) (width * scaleFactor), (int) (height * scaleFactor));
 			a[i] = (float []) (ipp.convertToFloat()).getPixels();
 		}
-		}catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+		}catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
 		return a;
 	}
 	/**
@@ -328,7 +328,7 @@ public class BIJutil
 			}
 			a[i] = (float []) (ipp.convertToFloat()).getPixels();
 		}
-		}catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+		}catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
 		return a;
 	}
 	/**
@@ -363,7 +363,7 @@ public class BIJutil
 			}
 			a[i] = (short []) (ipp.convertToShort(false)).getPixels();
 		}
-		}catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.write(c.toString()); }
+		}catch (Exception e) { CharArrayWriter c = new CharArrayWriter(); e.printStackTrace(new PrintWriter(c)); IJ.log(c.toString()); }
 		return a;
 	}
         /**

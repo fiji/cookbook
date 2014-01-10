@@ -38,14 +38,14 @@ public class Open_Different_Sizes_As_Stack
             return;
         StringSorter.sort(list);
         if(IJ.debugMode)
-            IJ.write("FolderOpener: " + directory + " (" + list.length + " files)");
+            IJ.log("FolderOpener: " + directory + " (" + list.length + " files)");
         ImagePlus impl = null;
         for(int i = 0; i < list.length; i++)
         {
             ImagePlus imp = (new Opener()).openImage(directory, list[i]);
             if(imp == null)
             {
-                IJ.write(list[i] + ": unable to open");
+                IJ.log(list[i] + ": unable to open");
                 continue;
             }
             if(width < imp.getWidth() || height < imp.getHeight())
@@ -64,7 +64,7 @@ public class Open_Different_Sizes_As_Stack
             IJ.showStatus((stack.getSize() + 1) + "/" + list.length + ": " + title);
             if(imp == null)
             {
-                IJ.write(list[i] + ": unable to open");
+                IJ.log(list[i] + ": unable to open");
                 continue;
             }
             FloatProcessor ip = new FloatProcessor(width, height);

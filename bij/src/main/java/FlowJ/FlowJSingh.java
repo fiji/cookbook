@@ -59,7 +59,7 @@ public class FlowJSingh
 			  depth = 3;
 			  this.sigmas = sigmas;
 
-			  IJ.write("Singh: laplace convolution sigma "+sigmas);
+			  IJ.log("Singh: laplace convolution sigma "+sigmas);
 			  v = new VolumeFloat(width, height, depth);
 			  if (stack.getSize() < depth)
 			  {
@@ -97,7 +97,7 @@ public class FlowJSingh
 			  this.tau1 = tau1;
 			  IJ.showStatus("Singh...");
 			  // Step 1 Singh. (see Barron)
-			  IJ.write("Singh: step 1 tau = "+tau1);
+			  IJ.log("Singh: step 1 tau = "+tau1);
 			  flow.v.setEdge(edge);
 			  for (int y = 0; y < height; y++)
 			  {
@@ -116,8 +116,8 @@ public class FlowJSingh
 								  int [] loc = ssd.peak(x,y);       // find peak
 								  if (false && debug && x==45 && y==46)
 								  {
-										IJ.write(ssd.toString());
-										IJ.write("peak: "+loc[0]+","+loc[1]);
+										IJ.log(ssd.toString());
+										IJ.log("peak: "+loc[0]+","+loc[1]);
 								  }
 								  if (debug && x >= 44 && x < 46 && y >= 45 && y < 47)
 										ssd.check(x, y, loc, 0);
@@ -125,7 +125,7 @@ public class FlowJSingh
 								  ssdc.center(ssd, loc);         // center around peak
 								  float min = ssdc.min();       // minimum value in ssdc.
 								  if (debug && x >= 44 && x < 46 && y >= 45 && y < 47)
-										IJ.write("min = "+min);
+										IJ.log("min = "+min);
 								  if (debug && x >= 44 && x < 46 && y >= 45 && y < 47)
 										ssdc.check(x, y, loc, Float.MAX_VALUE);
 								  float k;
@@ -163,7 +163,7 @@ public class FlowJSingh
                                                                   try
                                                                   {
                                                                         j = new BIJJacobi(covariance, true);
-                                                                } catch (Exception e) { IJ.write("Inverse or Jacobi error "+e); }
+                                                                } catch (Exception e) { IJ.log("Inverse or Jacobi error "+e); }
 								  j.compute();
 								  j.sort();
 								  //if (debug) j.check(covariance);
@@ -186,7 +186,7 @@ public class FlowJSingh
 		{
 			  this.tau2 = tau2;
 			  IJ.showStatus("Singh...");
-			  IJ.write("Singh: step 2 tau = "+tau2);
+			  IJ.log("Singh: step 2 tau = "+tau2);
 			  int total=0; int full=0;
 			  int FIRST = 0;
 			  int SECOND = 1;
@@ -223,7 +223,7 @@ public class FlowJSingh
 							if (x >= edge+w && x < width-edge-w && y >= edge+w && y < height-edge-w)
 							{
 								  try { BIJmatrix.pseudoinverse(SccI[y][x], Scc[y][x], 0.1); }
-								  catch (Exception e) { IJ.write("init inverse error");  }
+								  catch (Exception e) { IJ.log("init inverse error");  }
 									BIJmatrix.mul(SccI_Ucc[y][x][0], SccI[y][x], Ucc[y][x]);
 
 									float [][][] neighborhood = new float [w*2+1][w*2+1][2];
@@ -242,7 +242,7 @@ public class FlowJSingh
 					  }
 			  }
 			  if (debug)
-					IJ.write("step 2 initialization completed");
+					IJ.log("step 2 initialization completed");
 			  // Try to reach an iterative estimate.
 			  float max_diff = 0;
 			  // Make available for gc.
@@ -259,11 +259,11 @@ public class FlowJSingh
 								{
                                                                         float [][] SnI = new float [2][2];
                                                                         try { BIJmatrix.pseudoinverse(SnI, Sn[FIRST][y][x], 0.1); }
-                                                                        catch (Exception e) { IJ.write("iter "+n+" inverse error");  }
+                                                                        catch (Exception e) { IJ.log("iter "+n+" inverse error");  }
                                                                         float [][] Ssum = new float [2][2];
                                                                         BIJmatrix.add(Ssum, Sn[FIRST][y][x], SnI);
                                                                         try { BIJmatrix.pseudoinverse(ScSn[y][x], Ssum, 0.1); }  // ScSn = SsumI
-                                                                        catch (Exception e) { IJ.write("iter 2, "+n+" inverse error"); }
+                                                                        catch (Exception e) { IJ.log("iter 2, "+n+" inverse error"); }
                                                                         float [] vt1 = new float [2];
                                                                         BIJmatrix.mul(vt1, SnI, Ua[y][x]);
                                                                         float [] vt2 = BIJmatrix.addElements(SccI_Ucc[y][x][0], vt1);
@@ -278,7 +278,7 @@ public class FlowJSingh
 					}
 					if (stop)
 					{
-						  IJ.write("Step 2 convergence ("+n+") detected - iterative calculations are stopped");
+						  IJ.log("Step 2 convergence ("+n+") detected - iterative calculations are stopped");
 						  break;
 					}
 					for (int y = 0; y < height; y++)
@@ -322,7 +322,7 @@ public class FlowJSingh
 										}
 										total++;
 						  }
-			  IJ.write("step 2 complete. Valid computations: "+no_vels);
+			  IJ.log("step 2 complete. Valid computations: "+no_vels);
 			  density = (float) full/(float) total;
 	  } // compute2
 	  /*

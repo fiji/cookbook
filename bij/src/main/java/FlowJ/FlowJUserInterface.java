@@ -412,7 +412,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
 				IJ.wait(250);  // give system time to redraw ImageJ window
 				description = name;
 				fastDisplay();
-				IJ.write("Read: "+name);
+				IJ.log("Read: "+name);
 				flow = newflow;
 		  }
 	}
@@ -481,7 +481,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
                                         // Disregard FlowJExceptions
                                         catch (FlowJException e)
                                         {
-                                                IJ.write("FlowJException: "+e);
+                                                IJ.log("FlowJException: "+e);
                                                 flows.addElement(null);
                                         }
                                 }
@@ -492,7 +492,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
                 long elapsedTime = System.currentTimeMillis() - start;
                 float seconds = (float) elapsedTime / 1000;
                 long pxs = imp.getStack().getWidth() * imp.getStack().getHeight();
-                IJ.write(""+seconds + " sec" + ", " + (int)((float)pxs / seconds) + " pixels/second");
+                IJ.log(""+seconds + " sec" + ", " + (int)((float)pxs / seconds) + " pixels/second");
         }
 	/**
          * Compute the flow from the current stack.
@@ -521,7 +521,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
 					  // compute the flows
 					  fleet.computeFull(flow, getFloatField(condField), getFloatField(resLabel));
 					  description = fleet.toString();
-					  IJ.write(description);
+					  IJ.log(description);
 					  break;
 			  case LK:
 					  FlowJLucas lk = new FlowJLucas();
@@ -532,7 +532,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
 					  lk.computeFull(flow, normalsCheckbox.getState(),
                                                 getFloatField(sigmawField), tau, regularizationChoice.getSelectedIndex());
 					  description = lk.toString();
-					  IJ.write(description);
+					  IJ.log(description);
 					  break;
 			  case URAS:
 					  // Uras.
@@ -542,7 +542,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
 					  flow = new FlowJFlow(uras.getWidth(), uras.getHeight());
 					  uras.computeFull(flow, region, tau);
 					  description = uras.toString();
-					  IJ.write(description);
+					  IJ.log(description);
 					  break;
 			  case SINGH:
 					  FlowJSingh singh = new FlowJSingh();
@@ -553,7 +553,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
 					  //ImagePlus imp = new ImagePlus("Singh step 1" + stack.getSliceLabel(), ip); imp.show();
 					  //singh.compute2(flow, getFloatField(taus2Field));
 					  description = singh.toString();
-					  IJ.write(description);
+					  IJ.log(description);
 		  } // switch
 		  // Display the flow field in the canvas.
 		  IJ.showStatus("displaying...");
@@ -638,7 +638,7 @@ public class FlowJUserInterface extends ImagePlus implements ActionListener, Cli
 		        return 0;
         }
 	public static void showStatus(String s) {   IJ.showStatus(s); }
-	public static void write(String s) {   IJ.write(s); }
+	public static void write(String s) {   IJ.log(s); }
 	public static void showProgress(float d) { IJ.showProgress(d); }
 	public static void error(String s) { IJ.error(s); }
 }

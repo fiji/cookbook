@@ -73,11 +73,11 @@ public class Cell_Counter implements PlugInFilter{
   } // end of results reset
 
   void report(){
-    IJ.write("Type 1: "+type1Count);
-    IJ.write("Type 2: "+type2Count);
-    IJ.write("Type 3: "+type3Count);
-    IJ.write("Type 4: "+type4Count);
-    IJ.write("Total:  "+totalCount);
+    IJ.log("Type 1: "+type1Count);
+    IJ.log("Type 2: "+type2Count);
+    IJ.log("Type 3: "+type3Count);
+    IJ.log("Type 4: "+type4Count);
+    IJ.log("Total:  "+totalCount);
   } // end of result report method
 
   class CustomCanvas extends ImageCanvas {
@@ -100,7 +100,7 @@ public class Cell_Counter implements PlugInFilter{
 	 IJ.setForegroundColor(255,255,255);
 	 img2.setRoi(x-4,y-4,9,9);
 	 IJ.run("Fill", "slice");
-	 IJ.write(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
+	 IJ.log(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
       }
       if (type == 2){ // button 2
 	 type2Count++;
@@ -108,7 +108,7 @@ public class Cell_Counter implements PlugInFilter{
 	 IJ.setForegroundColor(0,255,0);
 	 img2.setRoi(x-4,y-4,9,9);
 	 IJ.run("Fill", "slice");
-	 IJ.write(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
+	 IJ.log(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
       }
       if (type == 3){ // button 3
 	 type3Count++;
@@ -116,7 +116,7 @@ public class Cell_Counter implements PlugInFilter{
 	 IJ.setForegroundColor(0,0,255);
 	 img2.setRoi(x-4,y-4,9,9);
 	 IJ.run("Fill", "slice");
-	 IJ.write(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
+	 IJ.log(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
       }
       if (type == 4){ // button4
 	 type4Count++;
@@ -124,7 +124,7 @@ public class Cell_Counter implements PlugInFilter{
 	 IJ.setForegroundColor(255,255,0);
 	 img2.setRoi(x-4,y-4,9,9);
 	 IJ.run("Fill", "slice");
-	 IJ.write(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
+	 IJ.log(type+"\t"+type1Count+"\t"+type2Count+"\t"+type3Count+"\t"+type4Count+"\t"+totalCount);
       }
       if (type ==5){ // button 5
 	 return;

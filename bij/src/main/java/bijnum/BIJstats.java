@@ -484,7 +484,7 @@ public class BIJstats
 	{
 		float [] minmax = BIJmatrix.minmax(v);
 	        float scale =  (minmax[1] - minmax[0]) / 255f;
-		//IJ.write("min "+minmax[0]+"max"+minmax[1]+"scale="+scale);
+		//IJ.log("min "+minmax[0]+"max"+minmax[1]+"scale="+scale);
 		int [] histogram = histogram(v, minmax[0], 1/scale, 255);
 		int bin = binIndex(histogram, fraction);
 		return minmax[0] + bin * scale;
@@ -526,7 +526,7 @@ public class BIJstats
 		int bin = histogram.length - 1;
 		while ((fraction*total) - (float) aggr >= 0)
 		{
-			//IJ.write("total "+total+" fraction="+(fraction*total)+" aggr="+aggr);
+			//IJ.log("total "+total+" fraction="+(fraction*total)+" aggr="+aggr);
 			aggr += histogram[bin--];
 		}
 		return bin;
@@ -609,7 +609,7 @@ public class BIJstats
                 float [] auv = unitvar(a);
 		float [] buv = unitvar(b);
 		// Mean is zero, variance is 1.
-		//IJ.write("mse: avg="+avg(auv)+", "+avg(buv)+" var="+var(auv)+", "+var(buv));
+		//IJ.log("mse: avg="+avg(auv)+", "+avg(buv)+" var="+var(auv)+", "+var(buv));
 		float agr = 0;
 		for (int i = 0; i < a.length; i++)
 		       agr += Math.pow(auv[i]-buv[i], 2);

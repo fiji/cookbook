@@ -204,7 +204,7 @@ public class SSD
 			for (int l = -size/2; l <= size/2; l++)
 				for (int k = -size/2; k <= size/2; k++)
 					SSD[l+size/2][k+size/2] = w[l+size/2][k+size/2];
-			IJ.write("Check minima at "+x+","+y+" max (peak)="+loc[0]+","+loc[1]);
+			IJ.log("Check minima at "+x+","+y+" max (peak)="+loc[0]+","+loc[1]);
 			for (int i=0;i<r;i++)
 			{
 				  float min_value = Float.MAX_VALUE;
@@ -226,9 +226,9 @@ public class SSD
 					}
 				  SSD[u_min+N][v_min+N] = Float.MAX_VALUE;
 				  if (startmag < 1)
-						IJ.write(""+i+"th minimum: "+min_value+" at "+u_min+","+v_min
+						IJ.log(""+i+"th minimum: "+min_value+" at "+u_min+","+v_min
 						+" SSDmag: "+(u_min*u_min+v_min*v_min));
-				  else  IJ.write(""+i+"th minimum: "+min_value+" at "+u_min+","+v_min);
+				  else  IJ.log(""+i+"th minimum: "+min_value+" at "+u_min+","+v_min);
 
 			}
 	  }

@@ -36,7 +36,7 @@ public class Open_Sequence_As_Stack
             return;
         imageCount = (int)gd.getNextNumber();
         if(IJ.debugMode)
-            IJ.write("SetOpener: " + directory + " (" + imageCount + " files)");
+            IJ.log("SetOpener: " + directory + " (" + imageCount + " files)");
         ImagePlus imp = (new Opener()).openImage(directory, name);
         if(imp == null)
         {
@@ -73,17 +73,17 @@ public class Open_Sequence_As_Stack
             ImagePlus imp2 = (new Opener()).openImage(directory, n);
             if(imp2 == null)
             {
-                IJ.write(n + ": unable to open");
+                IJ.log(n + ": unable to open");
                 continue;
             }
             if(imp2.getWidth() != width || imp2.getHeight() != height)
             {
-                IJ.write(n + ": wrong dimensions");
+                IJ.log(n + ": wrong dimensions");
                 continue;
             }
             if(imp2.getType() != type)
             {
-                IJ.write(n + ": wrong type");
+                IJ.log(n + ": wrong type");
             } else
             {
                 String title = imp2.getTitle();

@@ -87,7 +87,7 @@ public class BIJpca
                 System.out.println("Computing pca...normalizing images");
                 this.a = a;
 		double avg = BIJstats.means(a);
-		//IJ.write(BIJutil.toString(avg));
+		//IJ.log(BIJutil.toString(avg));
 		BIJmatrix.add(a, -avg);
                 System.out.println("PCA uses "+(a.length*a[0].length * 4)+" bytes (a).");
 		// Compute covariance matrix.
@@ -95,7 +95,7 @@ public class BIJpca
 		float [][] cov = BIJstats.covariance(a, true);
                 System.out.println("Computing pca...covariance matrix ("+(cov.length*cov[0].length)+"bytes) ok "+(new Date()).toString());
 		// cov is not positive definite!
-		//IJ.write("Covariance matrix\n"+BIJutil.toString(cov));
+		//IJ.log("Covariance matrix\n"+BIJutil.toString(cov));
 		// Prepare computing eigenvectors.
 		//Jacobi jacobi = new Jacobi(cov.length);
 		BIJJacobi jacobi = new BIJJacobi(cov, true);
@@ -105,9 +105,9 @@ public class BIJpca
                 System.gc();
                 System.out.println("Computing pca...eigenvector matrix ok "+(new Date()).toString());
 		jacobi.sort();
-		//IJ.write("Eigenvalues:\n"+BIJutil.toString(jacobi.eigenvalues));
-		//IJ.write("Eigensystem:\n"+jacobi.toString());
-		//IJ.write(BIJutil.toString(jacobi.eigenvectors));
+		//IJ.log("Eigenvalues:\n"+BIJutil.toString(jacobi.eigenvalues));
+		//IJ.log("Eigensystem:\n"+jacobi.toString());
+		//IJ.log(BIJutil.toString(jacobi.eigenvectors));
 		this.eigenvalues = BIJmatrix.copy(jacobi.eigenvalues);
                 // Will be transposed later on.
 		this.eigenvectors = BIJmatrix.copy(jacobi.eigenvectors);

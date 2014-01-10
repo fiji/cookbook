@@ -48,7 +48,7 @@ public class VolumeIO extends VolumeFloat
       {
 		    OutputStream os = null;
 		    try {os = new FileOutputStream(fileName);}
-		    catch (IOException e) {IJ.write("" + e); return;}
+		    catch (IOException e) {IJ.log("" + e); return;}
         // write dimensions.
         {
               byte[] buffer = new byte[2*3];
@@ -59,7 +59,7 @@ public class VolumeIO extends VolumeFloat
               i++;
 				      buffer[i*2] = (byte)((depth>>>8)&0xff); buffer[i*2+1] = (byte)(depth&0xff);
               try {os.write(buffer, 0, buffer.length); }
-              catch (IOException e) {IJ.write("" + e); return;}
+              catch (IOException e) {IJ.log("" + e); return;}
         }
         // now write the data.
         int size = width*height*depth;
@@ -79,20 +79,20 @@ public class VolumeIO extends VolumeFloat
                 IJ.showStatus("Writing... "+(100*(y*height+t*height*width))/size+"%");
             }
             try {os.write(buffer, 0, buffer.length); }
-            catch (IOException e) {IJ.write("" + e); return;}
+            catch (IOException e) {IJ.log("" + e); return;}
         }
         try {os.close(); }
-        catch (IOException e) {IJ.write("" + e); return;}
+        catch (IOException e) {IJ.log("" + e); return;}
     }
     // Get volume dimensions from a file.
     private void getDimensions(String fileName)
     {
 		    InputStream os = null;
 		    try {os = new FileInputStream(fileName);}
-		    catch (IOException e) {IJ.write("" + e); return;}
+		    catch (IOException e) {IJ.log("" + e); return;}
         byte[] buffer = new byte[2*3];
         try {os.read(buffer, 0, buffer.length); }
-        catch (IOException e) {IJ.write("" + e); return;}
+        catch (IOException e) {IJ.log("" + e); return;}
 				int j = 0;
         width = (int) (((buffer[j*2]&0xff)<<8) | (buffer[j*2+1]&0xff));
         j++;
@@ -100,25 +100,25 @@ public class VolumeIO extends VolumeFloat
         j++;
         depth = (int) (((buffer[j*2]&0xff)<<8) | (buffer[j*2+1]&0xff));
         try {os.close(); }
-        catch (IOException e) {IJ.write("" + e); return;}
+        catch (IOException e) {IJ.log("" + e); return;}
     }
     private void read(String fileName)
     {
 		    InputStream is = null;
 		    try {is = new FileInputStream(fileName);}
-		    catch (IOException e) {IJ.write("" + e); return;}
+		    catch (IOException e) {IJ.log("" + e); return;}
         int size = depth*height*width;
         {
               // skip the dimensions field.
               byte[] buffer = new byte[2*3];
               try {is.read(buffer, 0, buffer.length); }
-              catch (IOException e) {IJ.write("" + e); return;}
+              catch (IOException e) {IJ.log("" + e); return;}
         }
         for (int t = 0; t < depth; t++)
         {
             byte[] buffer = new byte[width*height*4];
             try {is.read(buffer, 0, buffer.length); }
-            catch (IOException e) {IJ.write("" + e); return;}
+            catch (IOException e) {IJ.log("" + e); return;}
  		        for (int y = 0; y < height; y++)
             {
  		  	        for (int x = 0; x < width; x++)
@@ -133,7 +133,7 @@ public class VolumeIO extends VolumeFloat
             }
         }
         try {is.close(); }
-        catch (IOException e) {IJ.write("" + e); return;}
+        catch (IOException e) {IJ.log("" + e); return;}
     }
     public boolean delete(String filename)
     // delete the volume file.

@@ -68,7 +68,7 @@ public class VJRenderViewInteractive extends VJRenderView
                 mm = new VJMatrix();
                 mm.rotatey(angley);
                 m.mul(mm);
-                IJ.write("rotated by: "+anglex+", "+angley+" starting rendering now...");
+                IJ.log("rotated by: "+anglex+", "+angley+" starting rendering now...");
 		newView();
 	}
         /**
@@ -77,7 +77,7 @@ public class VJRenderViewInteractive extends VJRenderView
         public void newView()
         {
                 if (! running)
-		        IJ.write("newView not initialized!");
+		        IJ.log("newView not initialized!");
 		renderer.setTransformation(m, mLight);
                 long start = System.currentTimeMillis();
                 // Render a single view.

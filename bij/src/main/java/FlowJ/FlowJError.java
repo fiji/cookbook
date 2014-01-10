@@ -176,7 +176,7 @@ public class FlowJError
 					  total++;
 				}
 			}
-		IJ.write("Density "+IJ.d2s(100*(float)full /(float)total,2)+
+		IJ.log("Density "+IJ.d2s(100*(float)full /(float)total,2)+
 				"%; psi average: "+IJ.d2s(sumPsi / (float) full, 2));
 	}
 	public static void map(Graphics g, int width, int height, FlowJFlow flow, FlowJFlow trueFlow)
@@ -330,7 +330,7 @@ public class FlowJError
 		float std = Math.abs((rangeStddev - rangeN*rangePsi*rangePsi)/(rangeN-1));
 		rangeStddev = (float) Math.sqrt(std);
 		float rangeDensity = (float) rangeN / (float) rangeS;
-		IJ.write("Average psi (0.0-"+rangeMax+"): "+IJ.d2s(rangePsi,2)+" stddev: "
+		IJ.log("Average psi (0.0-"+rangeMax+"): "+IJ.d2s(rangePsi,2)+" stddev: "
 			  +IJ.d2s(rangeStddev,2)+" ("+IJ.d2s(rangeDensity*100,2)+"%)"+" relative speed error: "+IJ.d2s(rangeLength/rangeN,2));
 		 // over n.
 		for (int i = 0; i < binNr; i++)

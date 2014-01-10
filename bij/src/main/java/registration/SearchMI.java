@@ -50,7 +50,7 @@ public class SearchMI extends BIJmi implements nmDoubleArrayParametrized, nmDoub
     {
         this.p = p;
         if(offset != 0)
-            IJ.write("HELP offset not 0".concat(String.valueOf(String.valueOf(offset))));
+            IJ.log("HELP offset not 0".concat(String.valueOf(String.valueOf(offset))));
     }
 
     @Override

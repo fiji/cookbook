@@ -80,7 +80,7 @@ public class BIJmi
 				if (ix0 >= 0 && ix1 >= 0)
 				{
 					//if (ix0 > bins || ix1 >= bins)
-					//     IJ.write("ix0 "+ix0+" ix1 "+ix1+"bins "+bins+" min "+min+ " scale "+scale);
+					//     IJ.log("ix0 "+ix0+" ix1 "+ix1+"bins "+bins+" min "+min+ " scale "+scale);
 					Pu[ix0]++;
 					Pv[ix1]++;
 					Puv[ix0*bins+ix1]++;
@@ -130,7 +130,7 @@ public class BIJmi
 				}
                         }
 		}
-		//IJ.write("min = "+min+"scale="+scale);
+		//IJ.log("min = "+min+"scale="+scale);
 		return computeProbs(n);
 	}
 	/*

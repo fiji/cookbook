@@ -92,7 +92,7 @@ label0:
                     }
                     int rix = (int)Math.round(r / rStep);
                     if(rix >= distanceBins)
-                        IJ.write("Error in line Hough rix " + rix + " theta" + theta + " ix" + tix + " x=" + x + "y=" + y);
+                        IJ.log("Error in line Hough rix " + rix + " theta" + theta + " ix" + tix + " x=" + x + "y=" + y);
                     a[tix * distanceBins + rix]++;
                     tix++;
                 } while(true);

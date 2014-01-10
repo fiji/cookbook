@@ -97,7 +97,7 @@ public class MI_ implements PlugInFilter {
 
             PlotWindow pw = new PlotWindow("MI " + imp.getTitle(), "slice", "-MI (slice 1 to slice)", xValues, Cmi);
             pw.draw();
-            IJ.write("Mutual Information (first slice to slice):\naverage=" + avg + "stdev: " + stdev);
+            IJ.log("Mutual Information (first slice to slice):\naverage=" + avg + "stdev: " + stdev);
         }
         catch(Exception ex)
         {

@@ -70,7 +70,7 @@ import bijnum.BIJmatrix;
         }
         catch(Exception e)
         {
-            IJ.write("Error " + e);
+            IJ.log("Error " + e);
         }
         fpeak[0] = -x[1] / (2.0F * x[0]);
         z[0] = image[xpeak + (ypeak - 1) * width];
@@ -96,7 +96,7 @@ import bijnum.BIJmatrix;
         }
         catch(Exception e)
         {
-            IJ.write("Error " + e);
+            IJ.log("Error " + e);
         }
         fpeak[1] = -x[1] / (2.0F * x[0]);
         mag = x[0] * (fpeak[1] * fpeak[1]) + x[1] * fpeak[1] + x[2];

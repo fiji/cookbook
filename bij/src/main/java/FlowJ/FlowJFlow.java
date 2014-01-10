@@ -197,7 +197,7 @@ public class FlowJFlow
 	{
 		byte[] buffer = new byte[4];
 		try {s.read(buffer, 0, buffer.length); }
-		catch (IOException e) {IJ.write("error reading float" + e); return (0);}
+		catch (IOException e) {IJ.log("error reading float" + e); return (0);}
 		int tmp = (int)(((buffer[0]&0xff)<<24)
 								  | ((buffer[1]&0xff)<<16)
 								  | ((buffer[2]&0xff)<<8)
@@ -213,7 +213,7 @@ public class FlowJFlow
 		buffer[2] = (byte)((tmp>>8)&0xff);
 		buffer[3] = (byte)(tmp&0xff);
 		try {s.write(buffer, 0, buffer.length); }
-		catch (IOException e) {IJ.write("error writing float" + e); return;}
+		catch (IOException e) {IJ.log("error writing float" + e); return;}
 	}
 	/**
          * Read a flow field defined in a file.
@@ -227,7 +227,7 @@ public class FlowJFlow
 	{
                 InputStream is = null;
                 try {is = new FileInputStream(fileName);}
-                catch (IOException e) {IJ.write("" + e); return false;}
+                catch (IOException e) {IJ.log("" + e); return false;}
 		int width = (int) readfloat(is);
 		int height = (int) readfloat(is);
 		// allocate the arrays.
@@ -244,7 +244,7 @@ public class FlowJFlow
 			  {
 					byte[] buffer = new byte[getWidth()*4*2];
 					try {is.read(buffer, 0, buffer.length); }
-					catch (IOException e) {IJ.write("" + e); return false;}
+					catch (IOException e) {IJ.log("" + e); return false;}
 					int tmpx = 0; int tmpy = 0;
 					for (int x = startwidth; x < endwidth; x++)
                                         {
@@ -261,7 +261,7 @@ public class FlowJFlow
 			  IJ.showStatus("Reading... "+(100*(y*getHeight()))/size+"%");
 		}
 		try {is.close(); }
-		catch (IOException e) {IJ.write("" + e); return false;}
+		catch (IOException e) {IJ.log("" + e); return false;}
 		return true;
 	}
 	/**
@@ -272,7 +272,7 @@ public class FlowJFlow
 	{
                 OutputStream s = null;
                 try {s = new FileOutputStream(fileName);}
-                catch (IOException e) {IJ.write("" + e); return;}
+                catch (IOException e) {IJ.log("" + e); return;}
 		// Write the dimensions of the file. */
 		writefloat(getWidth(), s);
 		writefloat(getHeight(), s);
@@ -304,11 +304,11 @@ public class FlowJFlow
                                   buffer[x*4*2+4+3] = (byte)(tmp&0xff);
                         }
                         try {s.write(buffer, 0, buffer.length); }
-                        catch (IOException e) {IJ.write("cannot write flow field" + e); return;}
+                        catch (IOException e) {IJ.log("cannot write flow field" + e); return;}
                         IJ.showStatus("Writing... "+(100*(y*v.getHeight()))/(v.getWidth()*v.getHeight())+"%");
 		}
 		try {s.close(); }
-		catch (IOException e) {IJ.write("" + e); return;}
+		catch (IOException e) {IJ.log("" + e); return;}
 	}
 	public void createRotation(int centerX, int centerY, float angle, Roi roi)
    /*
@@ -345,7 +345,7 @@ public class FlowJFlow
 					}
 				}
 			}
-			IJ.write("Rotate "+centerX+", "+centerY+"; "+fulls+" pixels in flow field");
+			IJ.log("Rotate "+centerX+", "+centerY+"; "+fulls+" pixels in flow field");
 	}
         /**
          * Return the magnitude of a rectangular motion vector.

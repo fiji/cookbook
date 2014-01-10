@@ -178,7 +178,7 @@ yMin=0; yFmin=0;
 				x2[i] = x[i]+(float)((float)sliceMin*timescale);	
 				//x3[i]=x2[i]+(4*timescale );
 				x2d [i] = (double)x2[i];	
-				//IJ.write(i + "\t"+ f[i]);
+				//IJ.log(i + "\t"+ f[i]);
 				}
 			CurveFitter cf = new CurveFitter(x2d, fd) ;
 			cf.doFit(CurveFitter.EXP_RECOVERY);
