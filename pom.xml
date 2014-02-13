@@ -26,8 +26,8 @@
 	</modules>
 
 	<organization>
-		<name>ImageJDev.org</name>
-		<url>http://developer.imagej.net/</url>
+		<name>Fiji</name>
+		<url>http://fiji.sc/</url>
 	</organization>
 
 	<developers>
