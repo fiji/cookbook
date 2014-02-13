@@ -87,8 +87,8 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git://github.com/fiji/cookbook.git</connection>
-		<developerConnection>scm:git:git@github.com:fiji/cookbook.git</developerConnection>
+		<connection>scm:git:git://github.com/fiji/cookbook</connection>
+		<developerConnection>scm:git:git@github.com:fiji/cookbook</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/fiji/cookbook</url>
 	</scm>
