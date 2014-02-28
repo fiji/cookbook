@@ -11,13 +11,10 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>sc.fiji</groupId>
 	<artifactId>cookbook_</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 
 	<name>Fiji Cookbook plugins</name>
 	<description>A collection of plugins described in the Fiji Cookbook.</description>
-	<url>http://fiji.sc/Cookbook</url>
 
 	<dependencies>
 		<dependency>
@@ -31,74 +28,6 @@
 			<version>20140108-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
-
-	<organization>
-		<name>ImageJDev.org</name>
-		<url>http://developer.imagej.net/</url>
-	</organization>
-
-	<developers>
-		<developer>
-			<id>ctrueden</id>
-			<name>Curtis Rueden</name>
-			<email>ctrueden@wisc.edu</email>
-			<url>http://loci.wisc.edu/people/curtis-rueden</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-		<developer>
-			<id>dscho</id>
-			<name>Johannes Schindelin</name>
-			<email>johannes.schindelin@gmx.de</email>
-			<url>http://loci.wisc.edu/people/johannes-schindelin</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-	</developers>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/fiji/cookbook/issues</url>
-	</issueManagement>
-
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.imagej.net/</url>
-	</ciManagement>
-
-	<mailingLists>
-		<mailingList>
-			<name>ImageJ</name>
-			<subscribe>http://imagej.net/list.html</subscribe>
-			<unsubscribe>http://imagej.net/list.html</unsubscribe>
-			<post>imagej@list.nih.gov</post>
-			<archive>http://list.nih.gov/archives/imagej.html</archive>
-		</mailingList>
-		<mailingList>
-			<name>Fiji-devel</name>
-			<subscribe>http://groups.google.com/group/fiji-devel</subscribe>
-			<unsubscribe>http://groups.google.com/group/fiji-devel</unsubscribe>
-			<post>fiji@fiji.sc</post>
-			<archive>http://groups.google.com/group/fiji-devel</archive>
-		</mailingList>
-	</mailingLists>
-
-	<scm>
-		<connection>scm:git:git://github.com/fiji/cookbook.git</connection>
-		<developerConnection>scm:git:git@github.com:fiji/cookbook.git</developerConnection>
-		<tag>HEAD</tag>
-		<url>https://github.com/fiji/cookbook</url>
-	</scm>
 
 	<repositories>
 		<!-- NB: for project parent -->
