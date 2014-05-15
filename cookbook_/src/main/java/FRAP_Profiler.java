@@ -1,18 +1,22 @@
-import ij.plugin.filter.*;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.measure.*;
-import ij.util.*;
-import ij.plugin.filter.Analyzer;
-import java.awt.Rectangle;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.PlotWindow;
+import ij.gui.Roi;
+import ij.measure.Calibration;
 import ij.measure.CurveFitter;
-import java.awt.*;
-import java.text.DecimalFormat; 
-import java.awt.image.*;
+import ij.measure.Measurements;
+import ij.plugin.filter.Analyzer;
+import ij.plugin.filter.PlugInFilter;
 import ij.plugin.frame.RoiManager;
+import ij.process.ImageProcessor;
+import ij.process.ImageStatistics;
+import ij.util.Tools;
 
-import java.util.*;
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.text.DecimalFormat;
+import java.util.Hashtable;
 
 
 

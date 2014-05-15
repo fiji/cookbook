@@ -1,7 +1,11 @@
-import ij.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.Prefs;
+import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
-import ij.gui.*;
-import ij.process.*;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 /* Bob Dougherty, OptiNav, Inc.  Plugin to compute the 3D point spread function of a diffraction limited
 microscope.
 Version 0	May2, 2005

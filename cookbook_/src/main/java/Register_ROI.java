@@ -1,3 +1,4 @@
+import bijnum.BIJutil;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -11,7 +12,6 @@ import java.io.PrintWriter;
 import registration.Register;
 import registration.RegisterFFT;
 import volume.Transformer;
-import bijnum.BIJutil;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

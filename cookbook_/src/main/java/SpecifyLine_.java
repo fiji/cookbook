@@ -1,8 +1,10 @@
-import java.awt.*;
-import ij.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.Line;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
+import ij.process.ImageProcessor;
+
+import java.awt.Rectangle;
 
 /**
  *	The user types in starting and ending coodinates, and the plugin

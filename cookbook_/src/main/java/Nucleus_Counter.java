@@ -1,24 +1,11 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.*;
-import java.awt.List;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.io.*;
-import ij.measure.ResultsTable;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.Prefs;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.gui.ImageWindow;
 import ij.plugin.PlugIn;
-import ij.plugin.filter.PlugInFilter;
-import ij.plugin.filter.Analyzer;
-import ij.plugin.frame.PlugInFrame;
-import java.awt.datatransfer.*;
-
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import java.awt.*;
-import ij.plugin.*;
+import ij.process.ImageProcessor;
 
 public class Nucleus_Counter implements PlugIn {
 

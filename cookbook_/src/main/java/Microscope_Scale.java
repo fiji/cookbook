@@ -1,10 +1,10 @@
-import ij.*;
-import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
 import ij.measure.Calibration;
-import java.awt.*;
-import ij.plugin.*;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
 
 public class Microscope_Scale implements  PlugInFilter {
 

@@ -1,9 +1,9 @@
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import java.awt.*;
-import ij.plugin.*;
-import ij.ImageStack.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.plugin.PlugIn;
+import ij.process.ImageProcessor;
 
 public class Delta_F_up implements PlugIn {
 

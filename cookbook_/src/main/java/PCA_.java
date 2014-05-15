@@ -1,3 +1,6 @@
+import bijnum.BIJpca;
+import bijnum.BIJstats;
+import bijnum.BIJutil;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -9,10 +12,6 @@ import ij.process.ImageProcessor;
 
 import java.io.CharArrayWriter;
 import java.io.PrintWriter;
-
-import bijnum.BIJpca;
-import bijnum.BIJstats;
-import bijnum.BIJutil;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

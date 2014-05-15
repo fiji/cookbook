@@ -1,9 +1,11 @@
-import java.awt.*;
-import ij.*;
-import ij.gui.*;
-import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.GenericDialog;
 import ij.measure.Calibration;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
+
+import java.awt.Rectangle;
 /**
  *      Enhancing the original program created by Jeffrey Kuhn. This one takes,
  *      in addition to width and height and the option to have an oval ROI from 

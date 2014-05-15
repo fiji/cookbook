@@ -1,8 +1,13 @@
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import java.awt.*;
-import ij.plugin.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.gui.Roi;
+import ij.plugin.PlugIn;
+import ij.process.ImageProcessor;
+
+import java.awt.Rectangle;
 
 public class Zoomify_ implements PlugIn {
 

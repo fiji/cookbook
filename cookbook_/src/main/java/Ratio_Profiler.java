@@ -1,15 +1,21 @@
-   import ij.plugin.filter.*;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.measure.*;
-import ij.util.*;
+   import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.PlotWindow;
+import ij.gui.Roi;
+import ij.measure.Calibration;
+import ij.measure.Measurements;
 import ij.plugin.filter.Analyzer;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
+import ij.process.ImageStatistics;
+import ij.text.TextWindow;
+import ij.util.Tools;
+
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Rectangle;
-import ij.text.*;
-import java.text.DecimalFormat; 
-import ij.plugin.PlugIn;
-import java.awt.*;
+import java.text.DecimalFormat;
 
 public class Ratio_Profiler implements PlugInFilter, Measurements  {
 

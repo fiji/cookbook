@@ -1,7 +1,8 @@
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.plugin.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.plugin.PlugIn;
 
 /**
  * This plugin copies the calibration from one stack to a second stack.

@@ -1,5 +1,5 @@
+import VolumeJ.VJBackprojection;
 import ij.plugin.PlugIn;
-import VolumeJ.*;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

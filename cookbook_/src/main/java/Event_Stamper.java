@@ -4,6 +4,7 @@ import ij.gui.GenericDialog;
 import ij.gui.Toolbar;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
+
 import java.awt.Font;
 import java.awt.Rectangle;
 

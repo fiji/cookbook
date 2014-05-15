@@ -1,7 +1,27 @@
+import VolumeJ.VJClassifier;
+import VolumeJ.VJClassifierIsosurface;
+import VolumeJ.VJClassifierLevoy;
+import VolumeJ.VJClassifiers;
+import VolumeJ.VJInterpolator;
+import VolumeJ.VJIsosurfaceRender;
+import VolumeJ.VJLight;
+import VolumeJ.VJNearestNeighbor;
+import VolumeJ.VJPhongShader;
+import VolumeJ.VJRender;
+import VolumeJ.VJRenderView;
+import VolumeJ.VJRenderViewCine;
+import VolumeJ.VJRenderViewSingle;
+import VolumeJ.VJRenderViewStereo;
+import VolumeJ.VJRenderer;
+import VolumeJ.VJShader;
+import VolumeJ.VJTrilinear;
+import VolumeJ.VJUserInterface;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.Macro;
+import ij.WindowManager;
 import ij.plugin.PlugIn;
-import VolumeJ.*;
 import volume.Volume;
-import ij.*;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

@@ -1,5 +1,5 @@
-import ij.plugin.PlugIn;
 import VolumeJ.VJSurfaceJ;
+import ij.plugin.PlugIn;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

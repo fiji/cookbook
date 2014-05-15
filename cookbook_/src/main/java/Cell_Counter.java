@@ -1,18 +1,23 @@
-import ij.*;
-import ij.process.*;
-import ij.process.StackProcessor.*;
-import ij.gui.*;
-import ij.plugin.*;
-
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.*;
-import java.util.*;
-import ij.plugin.filter.PlugInFilter;
-import ij.measure.*;
-import ij.text.*;
-import ij.plugin.frame.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.ImageCanvas;
+import ij.gui.ImageWindow;
+import ij.gui.Roi;
+import ij.gui.StackWindow;
+import ij.gui.Toolbar;
+import ij.measure.ResultsTable;
 import ij.plugin.filter.Analyzer;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ImageProcessor;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 
 
 public class Cell_Counter implements PlugInFilter{
