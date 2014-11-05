@@ -5,9 +5,9 @@
 
 package knn;
 
+import bijnum.BIJmatrix;
 import volume.Convolver;
 import volume.GaussianDerivative;
-import bijnum.BIJmatrix;
 
 // Referenced classes of package knn:
 //            Feature

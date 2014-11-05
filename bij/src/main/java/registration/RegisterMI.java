@@ -1,8 +1,8 @@
 package registration;
 
-import numericalMethods.calculus.minimizing.nmPowell;
 import bijnum.BIJmatrix;
 import bijnum.BIJmi;
+import numericalMethods.calculus.minimizing.nmPowell;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

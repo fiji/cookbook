@@ -1,8 +1,8 @@
 package volume;
-import ij.process.ColorProcessor;
-import ij.process.ImageProcessor;
 import bijnum.BIJmatrix;
 import bijnum.BIJtransform;
+import ij.process.ColorProcessor;
+import ij.process.ImageProcessor;
 /**
  * This class implements static methods for transforming images and volumes.
  *

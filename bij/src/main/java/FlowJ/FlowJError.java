@@ -1,4 +1,5 @@
 package FlowJ;
+import bijnum.BIJmatrix;
 import ij.IJ;
 import ij.gui.Roi;
 import ij.process.ColorProcessor;
@@ -7,8 +8,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.io.PrintWriter;
-
-import bijnum.BIJmatrix;
 
 /*
 	  This class implements statistics computations on flow fields and comparisons

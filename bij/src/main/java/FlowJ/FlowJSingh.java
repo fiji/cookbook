@@ -1,4 +1,7 @@
 package FlowJ;
+import bijnum.BIJJacobi;
+import bijnum.BIJmatrix;
+import bijnum.Jacobi;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -6,9 +9,6 @@ import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
 import volume.Gaussian;
 import volume.VolumeFloat;
-import bijnum.BIJJacobi;
-import bijnum.BIJmatrix;
-import bijnum.Jacobi;
 
 /*
 	  This class implements the Singh region matching optical flow algorithm,

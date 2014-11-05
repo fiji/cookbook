@@ -1,14 +1,14 @@
 package registration;
 
+import bijfit.Maximum;
+import bijnum.BIJfht;
+import bijnum.BIJmatrix;
+import bijnum.BIJutil;
 import ij.IJ;
 import ij.ImagePlus;
 import ij.io.FileSaver;
 import ij.process.FloatProcessor;
 import volume.Equalize;
-import bijfit.Maximum;
-import bijnum.BIJfht;
-import bijnum.BIJmatrix;
-import bijnum.BIJutil;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin.

@@ -1,6 +1,6 @@
 //package FlowJ;
-import ij.plugin.PlugIn;
 import FlowJ.FlowJUserInterface;
+import ij.plugin.PlugIn;
 
 /*
 	 This class implements glue to interface 2D optic flow classes to ImageJ.

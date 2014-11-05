@@ -5,10 +5,10 @@
 
 package knn;
 
+import bijnum.BIJstats;
+
 import java.util.Enumeration;
 import java.util.Vector;
-
-import bijnum.BIJstats;
 
 public class Feature
 {

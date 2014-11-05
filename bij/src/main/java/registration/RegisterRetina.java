@@ -5,13 +5,13 @@
 
 package registration;
 
+import bijfit.Maximum;
+import bijnum.BIJmatrix;
+import bijnum.BIJmi;
 import ij.IJ;
 import numericalMethods.calculus.minimizing.nmPowell;
 import volume.Equalize;
 import volume.Hessian;
-import bijfit.Maximum;
-import bijnum.BIJmatrix;
-import bijnum.BIJmi;
 
 // Referenced classes of package registration:
 //            RegisterMI, SearchMI, Register

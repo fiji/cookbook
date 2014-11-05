@@ -5,10 +5,10 @@
 
 package knn;
 
+import bijnum.BIJmatrix;
+
 import java.util.Enumeration;
 import java.util.Vector;
-
-import bijnum.BIJmatrix;
 
 // Referenced classes of package knn:
 //            Feature
