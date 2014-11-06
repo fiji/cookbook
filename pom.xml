@@ -45,7 +45,25 @@
 			</roles>
 			<timezone>-6</timezone>
 		</developer>
+		<developer>
+			<id>apal4</id>
+			<name>Aparna Pal</name>
+			<email>apal4@wisc.edu</email>
+			<url>http://loci.wisc.edu/people/aparna-pal</url>
+			<organization>UW-Madison LOCI</organization>
+			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-6</timezone>
+		</developer>
 	</developers>
+	<contributors>
+		<contibutor>Katie Hildebrand</contributor>
+		<contibutor>Amanda MacAllister</contributor>
+		<contibutor>Ruizhi "Ray" Liao</contributor>
+		<contibutor>Gabby Campagnola</contributor>
+	</contributors>
 
 	<scm>
 		<connection>scm:git:git://github.com/fiji/cookbook</connection>
