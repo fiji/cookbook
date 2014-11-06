@@ -59,10 +59,10 @@
 		</developer>
 	</developers>
 	<contributors>
-		<contibutor>Katie Hildebrand</contributor>
-		<contibutor>Amanda MacAllister</contributor>
-		<contibutor>Ruizhi "Ray" Liao</contributor>
-		<contibutor>Gabby Campagnola</contributor>
+		<contributor><name>Katie Hildebrand</name></contributor>
+		<contributor><name>Amanda MacAllister</name></contributor>
+		<contributor><name>Ruizhi "Ray" Liao</name></contributor>
+		<contributor><name>Gabby Campagnola</name></contributor>
 	</contributors>
 
 	<scm>
