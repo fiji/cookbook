@@ -18,20 +18,6 @@
 	<description>A collection of plugins described in the Fiji Cookbook.</description>
 	<url>http://fiji.sc/Cookbook</url>
 
-	<dependencies>
-		<!-- Fiji dependencies -->
-		<dependency>
-			<groupId>sc.fiji</groupId>
-			<artifactId>bij</artifactId>
-			<version>0.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>ij</artifactId>
-		</dependency>
-	</dependencies>
-
 	<developers>
 		<developer>
 			<id>ctrueden</id>
@@ -61,22 +47,20 @@
 		</developer>
 	</developers>
 
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/fiji/cookbook/issues</url>
-	</issueManagement>
-
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.imagej.net/job/cookbook/</url>
-	</ciManagement>
-
 	<scm>
 		<connection>scm:git:git://github.com/fiji/cookbook</connection>
 		<developerConnection>scm:git:git@github.com:fiji/cookbook</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/fiji/cookbook</url>
 	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/fiji/cookbook/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://jenkins.imagej.net/job/cookbook/</url>
+	</ciManagement>
 
 	<repositories>
 		<!-- NB: for project parent -->
@@ -85,5 +69,19 @@
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
 	</repositories>
+
+	<dependencies>
+		<!-- Fiji dependencies -->
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bij</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
 
 </project>
