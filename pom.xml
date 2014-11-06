@@ -6,29 +6,31 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.scijava</groupId>
-		<artifactId>pom-scijava</artifactId>
-		<version>1.131</version>
+		<groupId>sc.fiji</groupId>
+		<artifactId>pom-fiji</artifactId>
+		<version>5.0.2</version>
 	</parent>
 
-	<groupId>sc.fiji</groupId>
-	<artifactId>pom-cookbook</artifactId>
+	<artifactId>cookbook_</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
 
 	<name>Fiji Cookbook</name>
 	<description>A collection of plugins described in the Fiji Cookbook.</description>
 	<url>http://fiji.sc/Cookbook</url>
 
-	<modules>
-		<module>bij</module>
-		<module>cookbook_</module>
-	</modules>
+	<dependencies>
+		<!-- Fiji dependencies -->
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bij</artifactId>
+			<version>0.1.0</version>
+		</dependency>
 
-	<organization>
-		<name>Fiji</name>
-		<url>http://fiji.sc/</url>
-	</organization>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
 
 	<developers>
 		<developer>
@@ -69,23 +71,6 @@
 		<url>http://jenkins.imagej.net/job/cookbook/</url>
 	</ciManagement>
 
-	<mailingLists>
-		<mailingList>
-			<name>ImageJ</name>
-			<subscribe>http://imagej.net/list.html</subscribe>
-			<unsubscribe>http://imagej.net/list.html</unsubscribe>
-			<post>imagej@list.nih.gov</post>
-			<archive>http://list.nih.gov/archives/imagej.html</archive>
-		</mailingList>
-		<mailingList>
-			<name>Fiji-devel</name>
-			<subscribe>http://groups.google.com/group/fiji-devel</subscribe>
-			<unsubscribe>http://groups.google.com/group/fiji-devel</unsubscribe>
-			<post>fiji@fiji.sc</post>
-			<archive>http://groups.google.com/group/fiji-devel</archive>
-		</mailingList>
-	</mailingLists>
-
 	<scm>
 		<connection>scm:git:git://github.com/fiji/cookbook</connection>
 		<developerConnection>scm:git:git@github.com:fiji/cookbook</developerConnection>
@@ -100,19 +85,5 @@
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
 	</repositories>
-
-	<!-- NB: for deploying to maven.imagej.net -->
-	<distributionManagement>
-		<repository>
-			<id>imagej.releases</id>
-			<name>ImageJ Releases Repository</name>
-			<url>dav:http://maven.imagej.net/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>imagej.snapshots</id>
-			<name>ImageJ Snapshots Repository</name>
-			<url>dav:http://maven.imagej.net/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 </project>
