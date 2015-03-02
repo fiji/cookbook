@@ -107,7 +107,7 @@ public class Ratio_Profiler implements PlugInFilter, Measurements {
 			pw.setColor(Color.green);
 			pw.changeFont(new Font("Helvetica", Font.PLAIN, 12));
 			if (!isAltKey) pw.addLabel(0, 0, "Ch1÷Ch2");
-			else pw.addLabel(0, 0, "Ch2÷Ch1");;
+			else pw.addLabel(0, 0, "Ch2÷Ch1");
 			pw.draw();
 
 //plot raw data

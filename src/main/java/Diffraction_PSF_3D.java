@@ -118,7 +118,7 @@ public class Diffraction_PSF_3D implements PlugIn {
 		for (int k = 0; k < d; k++) {
 			// int kSym = (2*kc - k) % d;
 			// if(kSym == k){
-			IJ.showStatus("Computing psf slice " + (k + 1));;
+			IJ.showStatus("Computing psf slice " + (k + 1));
 			// }else{
 			// IJ.showStatus("Computing psf slices "+(k+1)+" and "+(kSym+1));
 			// }
