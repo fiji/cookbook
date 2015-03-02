@@ -194,7 +194,7 @@ public class Cell_Counter implements PlugInFilter {
 		}
 	}// end of Custom Window adding the buttons
 
-	class CustomStackWindow extends StackWindow implements ActionListener {
+	class CustomStackWindow extends StackWindow {
 
 		private Button button1, button2, button3, button4, button5;
 

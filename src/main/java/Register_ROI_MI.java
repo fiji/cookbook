@@ -27,7 +27,7 @@ import registration.RegisterMI;
  *          INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR
  *          FITNESS FOR A PARTICULAR PURPOSE.
  */
-public class Register_ROI_MI extends Register_ROI implements PlugInFilter {
+public class Register_ROI_MI extends Register_ROI {
 
 	@Override
 	public void run(final ImageProcessor ip) {

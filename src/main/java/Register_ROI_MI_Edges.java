@@ -28,7 +28,7 @@ import volume.Hessian;
  *          INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY OR
  *          FITNESS FOR A PARTICULAR PURPOSE.
  */
-public class Register_ROI_MI_Edges extends Register_ROI implements PlugInFilter
+public class Register_ROI_MI_Edges extends Register_ROI
 {
 
 	@Override
