@@ -18,26 +18,12 @@ public class Microscope_Scale implements PlugInFilter {
 	        a java class. Restart ImageJ.
 	**/
 	ImagePlus imp;
-	private static boolean addScaleBar = false; // if true run scalebar plugin -
-																							// available in version 1.28h
 	private static boolean isGlobalCal = false; // if true, set selected
 																							// calibration as the global
 																							// calibration
 	private static int magIndex = 4; // index of initial selected magnification in
 																		// dropdown menu
 	private static int binIndex = 0; // index of initial selected magnification in
-																		// dropdown menu
-	private static int scopeIndex = 0; // index of initial selected magnification
-																			// in dropdown menu
-
-	/* START EDIT
-	        Edit the following arrays using your microscope's nominal magnification steps, the
-	        corresponding spatial calibration and the length units of the spatial calibration.
-	        Make sure the arrays are of equal length.
-	**/
-	// Objective descriptions
-	private static String[] scopes = { "Time-Lapse", "Deconvolution", "Leica" };
-
 	private static String[] mags = { "TL ×2.5", "TL ×10", "TL ×16", "TL ×20",
 		"TL ×40 LWD", "TL ×40 oil", "Dec ×2.5", "Dec ×10", "Dec ×20", "Dec ×40",
 		"Dec ×65", "Dec ×100", "Leica ×5", "Leica ×10", "Leica ×20", "Leica ×40",
@@ -51,8 +37,6 @@ public class Microscope_Scale implements PlugInFilter {
 		0.151492, 0.155231, 2.56410, 0.67114, 0.32787, 0.16722, 0.10707, 0.07143,
 		1.345, 0.66, 0.334, 0.166, 0.0751, 1.087, 0.2188, 0.1109, 0.05618 };
 	private static int[] binScaling = { 1, 2, 4, 8 };
-	private static int choiceOffset = 0;
-
 	// units for the spacial calibrations given in xscales array above
 	private static String[] units = { "µm", "µm", "µm", "µm", "µm", "µm", "µm",
 		"µm", "µm", "µm", "µm", "µm", "µm", "µm", "µm", "µm", "µm", "µm", "µm",

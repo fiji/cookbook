@@ -33,7 +33,6 @@ public class Z_Code_Stack implements PlugIn {
 		final ImagePlus imp2 = WindowManager.getCurrentImage();
 		final ImageWindow winimp2 = imp2.getWindow();
 		final ImageStack img1 = imp1.getStack();
-		final ImageStack img2 = imp2.getStack();
 		final ImageStack dcStack = new ImageStack(width, height);
 		double val = 0;
 
@@ -43,13 +42,9 @@ public class Z_Code_Stack implements PlugIn {
 			IJ.run("Add...", "slice value=" + val);
 		}
 
-		final ImageProcessor ip2 = imp2.getProcessor();
 		IJ.run("RGB Color");
 		ImageProcessor ip1 = imp1.getProcessor();
-		final int grey = 0, r = 0, g = 0, b = 0;
-		final double newGrey = 0;
 		final int[] rgb = new int[3];
-		final int[] rgb2 = new int[3];
 		for (int n = 1; n <= stackSize; n++) {
 			ipc3 = new ColorProcessor(width, height);
 			ip1 = img1.getProcessor(n);

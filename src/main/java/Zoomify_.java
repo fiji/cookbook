@@ -3,7 +3,6 @@ import ij.ImagePlus;
 import ij.ImageStack;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
-import ij.gui.Roi;
 import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
 
@@ -14,7 +13,6 @@ public class Zoomify_ implements PlugIn {
 	@Override
 	public void run(final String arg) {
 		ImagePlus imp1 = WindowManager.getCurrentImage();
-		final Roi roi = imp1.getRoi();
 		if (imp1.getRoi() == null) {
 			IJ.showMessage("Error", "No ROI");
 			return;

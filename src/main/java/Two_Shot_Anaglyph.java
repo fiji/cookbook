@@ -8,11 +8,8 @@ import ij.process.ImageProcessor;
 
 public class Two_Shot_Anaglyph implements PlugInFilter {
 
-	private ImagePlus imp;
 	private String titles[];
 	private int wList[];
-	private int leftImageIndex;
-	private int rightImageIndex;
 	private ImagePlus Left;
 	private ImagePlus Right;
 
@@ -71,7 +68,6 @@ public class Two_Shot_Anaglyph implements PlugInFilter {
 
 	@Override
 	public int setup(final String s, final ImagePlus imp) {
-		this.imp = imp;
 		return DOES_RGB;
 	}
 

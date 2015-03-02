@@ -84,7 +84,6 @@ public class Add_Scale_Bar_ implements PlugIn {
 		final String units = cal.getUnits();
 		double pixelWidth = cal.pixelWidth;
 		if (pixelWidth == 0.0) pixelWidth = 1.0;
-		final double scale = 1.0 / pixelWidth;
 		imageWidth = imp.getWidth() * pixelWidth;
 		if (roiX > 0 && roiWidth > 10) barWidth = roiWidth * pixelWidth;
 		else if (barWidth == 0.0 || barWidth > 0.67 * imageWidth) {
@@ -95,7 +94,6 @@ public class Add_Scale_Bar_ implements PlugIn {
 		final int stackSize = imp.getStackSize();
 		int digits = (int) barWidth == barWidth ? 0 : 1;
 		if (barWidth < 1.0) digits = 2;
-		final int percent = (int) (barWidth * 100.0 / imageWidth);
 		if (mag < 1.0 && barHeightInPixels < defaultBarHeight / mag) barHeightInPixels =
 			(int) (defaultBarHeight / mag);
 		imp.getProcessor().snapshot();

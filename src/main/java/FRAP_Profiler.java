@@ -149,10 +149,6 @@ public class FRAP_Profiler implements PlugInFilter, Measurements {
 			final double xmin = a[0], xmax = a[1];
 			pwF.setLimits(xmin, xmax, yFmin, yFmax);
 			pwF.draw();
-			final float[] values2 = new float[y.length];
-			final int valsize = values2.length;
-			// for (int j=0; j<valsize; j++) values2[j] = y[j];
-
 			a = Tools.getMinMax(y);
 			final double ymin = a[0], ymax = a[1];
 			pw.setLimits(xmin, xmax, ymin, ymax);
@@ -164,7 +160,6 @@ public class FRAP_Profiler implements PlugInFilter, Measurements {
 			}
 			final float[] f = new float[y.length - sliceMin];
 			final float[] x2 = new float[y.length - sliceMin];
-			final float[] x3 = new float[y.length - sliceMin];
 			final double[] fd = new double[y.length - sliceMin];
 			final double[] x2d = new double[y.length - sliceMin];
 			for (int i = 0; i < y.length - sliceMin; i++) {
@@ -183,7 +178,6 @@ public class FRAP_Profiler implements PlugInFilter, Measurements {
 				df2.format(p[1]) + ";  " + df2.format(p[2]));
 			double tmp = 0;
 			final float[] fit = new float[y.length];
-			final float fitY = 0;
 			for (int z = 0; z < x2.length; z++) {
 				tmp = x2[z] - p[2];
 				if (tmp < 0.001) tmp = 0.001;
@@ -212,20 +206,15 @@ public class FRAP_Profiler implements PlugInFilter, Measurements {
 
 		imp.setRoi(full);
 		final ImageProcessor mask2 = imp.getMask();
-		final Rectangle rFull = full.getBoundingRect();
 
 		final Calibration cal = imp.getCalibration();
 		final Analyzer analyzer = new Analyzer(imp);
 
 		int measurements = Analyzer.getMeasurements();
 		final boolean showResults = measurements != 0 && measurements != LIMIT;
-		final boolean showingLabels =
-			(measurements & LABELS) != 0 || (measurements & SLICE) != 0;
-
 		measurements |= MEAN;
 		if (showResults) {
 			if (!Analyzer.resetCounter()) return null;
-			final float avg = 0;
 
 		}
 		int k = 0;

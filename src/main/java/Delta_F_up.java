@@ -21,7 +21,6 @@ public class Delta_F_up implements PlugIn {
 
 		final ImagePlus imp2 = duplicateStack(imp);
 		imp2.show();
-		final String duplicateName = imp2.getTitle();
 //IJ.showMessage("Box",fileName);
 		final ImageStack stack2 = imp2.getStack();
 		stack1.deleteSlice(1);
@@ -40,8 +39,6 @@ public class Delta_F_up implements PlugIn {
 
 	ImagePlus duplicateStack(final ImagePlus img1) {
 		final ImageStack stack1 = img1.getStack();
-		final int width = stack1.getWidth();
-		final int height = stack1.getHeight();
 		final int n = stack1.getSize();
 		ImageStack stack2 = img1.createEmptyStack();
 		try {

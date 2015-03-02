@@ -18,7 +18,6 @@ public class Nucleus_Counter implements PlugIn {
 		}
 		final ImagePlus imp1 = WindowManager.getCurrentImage();
 		final ImageProcessor ip1 = imp1.getProcessor();
-		final ImageWindow winimp1 = imp1.getWindow();
 
 		if (imp1.getType() != ImagePlus.GRAY8 && imp1.getType() != ImagePlus.GRAY16)
 		{
@@ -35,7 +34,6 @@ public class Nucleus_Counter implements PlugIn {
 		boolean watershed = Prefs.get("NC_watershed.boolean", true);
 		boolean summarize = Prefs.get("NC_summarize.boolean", true);
 		boolean add = Prefs.get("NC_record.boolean", true);
-		final boolean fullStats = Prefs.get("NC_fullStats.boolean", true);
 
 		int minthreshold = (int) ip1.getMinThreshold();
 		int maxthreshold = (int) ip1.getMaxThreshold();
@@ -131,7 +129,6 @@ public class Nucleus_Counter implements PlugIn {
 			WindowManager.setCurrentWindow(winimp3);
 			IJ.run("Adapative3DThreshold ");
 			imp5 = WindowManager.getCurrentImage();
-			final ImageProcessor ip5 = imp5.getProcessor();
 			winimp5 = imp5.getWindow();
 			WindowManager.setCurrentWindow(winimp5);
 			IJ.run("Rename...", "title=Threshold");
@@ -144,7 +141,6 @@ public class Nucleus_Counter implements PlugIn {
 			IJ.run("k-means Clustering",
 				"number=2 cluster=0.00010000 randomization=48");
 			imp5 = WindowManager.getCurrentImage();
-			final ImageProcessor ip5 = imp5.getProcessor();
 			winimp5 = imp5.getWindow();
 			WindowManager.setCurrentWindow(winimp5);
 			IJ.run("Rename...", "title=Threshold");

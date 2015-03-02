@@ -22,8 +22,6 @@ public class Colour_merge implements PlugIn {
 		}
 		final String none = "*None*";
 		titles[wList.length] = none;
-		final int pscol1 = 1;
-		final int pscol2 = 2;
 		final String[] pscolours =
 			{ "<Current>", "Cyan", "Magenta", "Yellow", "Red", "Green", "Blue",
 				"Grays" };
@@ -39,8 +37,6 @@ public class Colour_merge implements PlugIn {
 		gd.addCheckbox("Keep source stacks?", true);
 		gd.addNumericField("% of 2 pre-subtracted from 1?", 0, 0);
 		gd.addMessage("When merging brightfield with  fluorescence,\nensure the brightfield image is the first stack");
-
-		final String title3 = titles.length > 2 ? titles[2] : none;
 
 		gd.showDialog();
 
@@ -67,16 +63,11 @@ public class Colour_merge implements PlugIn {
 
 		final ImagePlus[] image = new ImagePlus[3];
 
-		int stackSize = 0;
 		int width = 0;
-		int height = 0;
-
 		for (int i = 0; i < 3; i++) {
 			if (index[i] < wList.length) {
 				image[i] = WindowManager.getImage(wList[index[i]]);
 				width = image[i].getWidth();
-				height = image[i].getHeight();
-				stackSize = image[i].getStackSize();
 			}
 		}
 		if (width == 0) {

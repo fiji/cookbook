@@ -92,8 +92,6 @@ public class Specify_ROI implements PlugInFilter {
 	 */
 	void getROI() {
 
-		final String[] dimensions = { "Pixels", "Units" };
-
 		final GenericDialog gd = new GenericDialog("Specify ROI", IJ.getInstance());
 		gd.addCheckbox("ROI size in µm?", iUnits);
 		gd.addNumericField("Width:", iWidth, 0);

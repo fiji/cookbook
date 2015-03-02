@@ -164,8 +164,6 @@ public class Iterative_Deconvolve_3D implements PlugIn {
 			minY = unDB(dataYin);
 		}
 
-		final float[] aw = null, ah = null, ad = null;
-
 		float scalePSF = 1;
 		if (normalize) {
 			float sum = 0;
@@ -461,7 +459,6 @@ public class Iterative_Deconvolve_3D implements PlugIn {
 	}
 
 	void toDB(final float[][] x, final double minDB) {
-		final double SCALE = 10 / Math.log(10);
 		final int n = x.length;
 		for (int i = 0; i < n; i++) {
 			toDB(x[i], minDB);
@@ -738,9 +735,7 @@ public class Iterative_Deconvolve_3D implements PlugIn {
 	void dfht3(final float[] x, final int base, final int maxN, final float[] s,
 		final float[] c)
 	{
-		final int i;
 		int stage, gpNum;
-		final int gpIndex;
 		int gpSize, numGps, Nlog2;
 		int bfNum, numBfs;
 		int Ad0, Ad1, Ad2, Ad3, Ad4, CSAd;

@@ -103,7 +103,6 @@ public class Diffraction_PSF_3D implements PlugIn {
 		final int jc = h / 2;
 		final int kc = d / 2;
 
-		final float a = (float) (2 * Math.PI * na / lambda);
 		final double dRing = 0.6 * lambda / (pixelSpacing * na);
 		if (!IJ.showMessageWithCancel(
 			"PSF: peak to first dark ring (w/o sph. aber.)",
@@ -181,7 +180,6 @@ public class Diffraction_PSF_3D implements PlugIn {
 
 				integral[r] = (float) (step * step * (sumR * sumR + sumI * sumI) / 9);
 			}
-			final double uSlices = (k - kc);
 			for (int j = 0; j < h; j++) {
 				IJ.showProgress((float) j / h);
 				for (int i = 0; i < w; i++) {

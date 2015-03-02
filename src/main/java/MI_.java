@@ -59,8 +59,6 @@ public class MI_ implements PlugInFilter {
 		}
 		try {
 			final short a[][] = BIJutil.shortMatrixFromImageStack(imp);
-			final int width = BIJutil.getMatrixWidth(imp);
-			final int height = a[0].length / width;
 			final float minmax[] = BIJShortMatrix.minmax(a);
 			final int min = (int) minmax[0];
 			final int max = (int) minmax[1];

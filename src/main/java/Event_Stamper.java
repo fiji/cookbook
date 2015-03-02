@@ -11,10 +11,8 @@ import java.awt.Rectangle;
 public class Event_Stamper implements PlugInFilter {
 
 	private ImagePlus imp;
-	private double time;
 	private static int x = 2;
 	private static int y = 15;
-	private static int size = 20;
 	private int maxWidth;
 	private Font font;
 	private int frame = 0;
@@ -23,8 +21,6 @@ public class Event_Stamper implements PlugInFilter {
 	private static String eventText = "";
 	private boolean firstSlice = true;
 	private boolean canceled;
-	private final int n = 1;
-
 	String getString(final double time) {
 		return eventText;
 	}
@@ -84,7 +80,6 @@ public class Event_Stamper implements PlugInFilter {
 		i = (int) gd.getNextNumber();
 		font = new Font("SansSerif", 0, i);
 		ip.setFont(font);
-		time = startFrame;
 		if (y < i) {
 			y = i;
 		}

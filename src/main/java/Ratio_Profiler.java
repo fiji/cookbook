@@ -95,9 +95,6 @@ public class Ratio_Profiler implements PlugInFilter, Measurements {
 			final double xmin = a[0], xmax = a[1];
 			final float[] values2 = new float[(ratio.length)];
 			final int valsize = values2.length;
-			final int valsize2 = valsize / 2;
-			int m = 1;
-
 			// get ratio range
 			for (int j = 0; j < (size); j++)
 				values2[j] = ratio[j];
@@ -112,10 +109,6 @@ public class Ratio_Profiler implements PlugInFilter, Measurements {
 
 //plot raw data
 
-			// float [] values2 = new float [(ch1.length)];
-			// int valsize = values2.length;
-			// int valsize2 = valsize/2;
-			m = 1;
 			for (int j = 0; j < valsize; j++)
 				values2[j] = ch1[j];
 			final double[] b = Tools.getMinMax(values2);
