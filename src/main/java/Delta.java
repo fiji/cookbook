@@ -4,10 +4,10 @@ import ij.ImageStack;
 import ij.WindowManager;
 import ij.process.ImageProcessor;
 
-/** Helper class for {@link Delta_F_up} and {@link Delta_F_down}. */
-public class Delta {
+/** Base class for {@link Delta_F_up} and {@link Delta_F_down}. */
+public abstract class Delta {
 
-	public void run(final boolean isUp) {
+	protected void run(final boolean isUp) {
 		final ImagePlus imp = WindowManager.getCurrentImage();
 		if (imp == null) {
 			IJ.noImage();

@@ -1,11 +1,9 @@
 import ij.plugin.PlugIn;
 
-public class Delta_F_down implements PlugIn {
+public class Delta_F_down extends Delta implements PlugIn {
 
 	@Override
 	public void run(final String arg) {
-
-		final Delta delta = new Delta();
-		delta.run(false);
+		run(false);
 	}
 }
