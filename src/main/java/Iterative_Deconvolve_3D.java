@@ -415,9 +415,7 @@ public class Iterative_Deconvolve_3D implements PlugIn {
 		if (ip < n) {
 			return ip;
 		}
-		else {
-			return n - (ip % n) - 1;
-		}
+		return n - (ip % n) - 1;
 	}
 
 	// A version of mod that is periodic for postive and negative i

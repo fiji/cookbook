@@ -36,9 +36,7 @@ public class Diffusion_ implements PlugInFilter {
 			showAbout();
 			return DONE;
 		}
-		else {
-			return NO_UNDO | DOES_ALL;
-		}
+		return NO_UNDO | DOES_ALL;
 	}
 
 	@Override

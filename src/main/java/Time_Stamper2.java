@@ -46,8 +46,7 @@ public class Time_Stamper2 implements PlugInFilter {
 
 	String getString(final double time) {
 		if (interval == 0.0) return suffix;
-		else return (decimalPlaces == 0 ? "" + (int) time : IJ.d2s(time,
-			decimalPlaces)) +
+		return (decimalPlaces == 0 ? "" + (int) time : IJ.d2s(time, decimalPlaces)) +
 			" " + suffix;
 	}
 

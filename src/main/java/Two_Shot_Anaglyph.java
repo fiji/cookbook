@@ -60,10 +60,7 @@ public class Two_Shot_Anaglyph implements PlugInFilter {
 		if (!showDialog()) {
 			return;
 		}
-		else {
-			Anaglyph(Left, Right);
-			return;
-		}
+		Anaglyph(Left, Right);
 	}
 
 	@Override
@@ -80,12 +77,10 @@ public class Two_Shot_Anaglyph implements PlugInFilter {
 		if (gd.wasCanceled()) {
 			return false;
 		}
-		else {
-			final int i = gd.getNextChoiceIndex();
-			final int j = gd.getNextChoiceIndex();
-			Left = WindowManager.getImage(wList[i]);
-			Right = WindowManager.getImage(wList[j]);
-			return true;
-		}
+		final int i = gd.getNextChoiceIndex();
+		final int j = gd.getNextChoiceIndex();
+		Left = WindowManager.getImage(wList[i]);
+		Right = WindowManager.getImage(wList[j]);
+		return true;
 	}
 }

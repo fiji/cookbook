@@ -16,7 +16,7 @@ import java.io.PrintWriter;
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin. Copyright (c)
  * 1999-2002, Michael Abramoff. All rights reserved.
- * 
+ *
  * @author: Michael Abramoff Small print: Permission to use, copy, modify and
  *          distribute this version of this software or any parts of it and its
  *          documentation or any parts of it ("the software"), for any purpose
@@ -45,10 +45,8 @@ public class PCA_ implements PlugInFilter {
 			showAbout();
 			return DONE;
 		}
-		else {
-			this.imp = imp;
-			return STACK_REQUIRED | NO_UNDO | DOES_ALL;
-		}
+		this.imp = imp;
+		return STACK_REQUIRED | NO_UNDO | DOES_ALL;
 	}
 
 	@Override

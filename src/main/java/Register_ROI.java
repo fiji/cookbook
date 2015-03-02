@@ -42,9 +42,7 @@ public class Register_ROI implements PlugInFilter {
 			showAbout();
 			return DONE;
 		}
-		else {
-			return DOES_ALL & ~DOES_8C;
-		}
+		return DOES_ALL & ~DOES_8C;
 	}
 
 	@Override

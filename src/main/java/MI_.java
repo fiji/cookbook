@@ -45,9 +45,7 @@ public class MI_ implements PlugInFilter {
 			showAbout();
 			return DONE;
 		}
-		else {
-			return DOES_ALL & ~DOES_8C;
-		}
+		return DOES_ALL & ~DOES_8C;
 	}
 
 	@Override
