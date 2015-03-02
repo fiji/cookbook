@@ -34,7 +34,7 @@ public class Depth_Coded_Stack_ implements PlugIn {
 	@Override
 	public void run(final String arg) {
 		final ImagePlus imp = WindowManager.getCurrentImage();
-		if ((imp instanceof ImagePlus) && imp.getStackSize() > 1) {
+		if (imp != null && imp.getStackSize() > 1) {
 			width = imp.getWidth();
 			height = imp.getHeight();
 			depth = imp.getStackSize();
