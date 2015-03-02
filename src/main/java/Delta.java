@@ -59,18 +59,9 @@ public class Delta {
 	private String calculateString(final String image1, final String image2,
 		final boolean isUp)
 	{
-		String calculatorstring = null;
-		if (isUp) {
-			calculatorstring =
-				("image1='" + image1 + "' operation=Subtract image2=" + image2 + " create stack");
-
-		}
-		else {
-			calculatorstring =
-				("image1='" + image2 + "' operation=Subtract image2=" + image1 + " create stack");
-		}
-
-		return calculatorstring;
-
+		final String arg1 = isUp ? image1 : image2;
+		final String arg2 = isUp ? image2 : image1;
+		return "image1='" + arg1 + "' operation=Subtract image2=" + arg2 +
+			" create stack";
 	}
 }
