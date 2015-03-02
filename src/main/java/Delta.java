@@ -34,10 +34,9 @@ public class Delta {
 		imp3.setTitle(fileName + " DeltaF " + (isUp ? "up" : "down"));
 		imp2.getWindow().close();
 		imp.getWindow().close();
-
 	}
 
-	ImagePlus duplicateStack(final ImagePlus img1) {
+	private ImagePlus duplicateStack(final ImagePlus img1) {
 		final ImageStack stack1 = img1.getStack();
 		final int n = stack1.getSize();
 		ImageStack stack2 = img1.createEmptyStack();
@@ -57,7 +56,7 @@ public class Delta {
 		return new ImagePlus("Duplicate", stack2);
 	}
 
-	public String calculateString(final String image1, final String image2,
+	private String calculateString(final String image1, final String image2,
 		final boolean isUp)
 	{
 		String calculatorstring = null;
