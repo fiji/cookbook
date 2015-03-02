@@ -119,8 +119,8 @@ public class VolumeJ_ implements PlugIn {
 	 * @param cine int = degrees between renderings
 	 * @param cineN int = number of cine renderings
 	 * @param classification int see VJClassifiers for index. Default = 0.
-	 * @param double threshold for Levoy surfaces
-	 * @param double width for Levoy surfaces.
+	 * @param threshold for Levoy surfaces
+	 * @param width for Levoy surfaces.
 	 * @param text a text to show as title of the rendering window.
 	 * @param cineToDisk whether or not to save the rendering to disk
 	 * @param cineAxis which axis to rotate for cine mode 0 = x, 1=y, 2=z
