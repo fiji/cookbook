@@ -5,7 +5,7 @@ import ij.WindowManager;
 import ij.process.ImageProcessor;
 
 /** Base class for {@link Delta_F_up} and {@link Delta_F_down}. */
-public abstract class Delta {
+public abstract class DeltaF {
 
 	protected void run(final boolean isUp) {
 		final ImagePlus imp = WindowManager.getCurrentImage();
