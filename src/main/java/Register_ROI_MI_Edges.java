@@ -1,5 +1,4 @@
 import ij.IJ;
-import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 
 import java.io.CharArrayWriter;
