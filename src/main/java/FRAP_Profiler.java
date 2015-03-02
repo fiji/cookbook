@@ -47,13 +47,13 @@ public class FRAP_Profiler implements PlugInFilter, Measurements {
 		rm.select(0);
 		Roi roi = imp.getRoi();
 
-		final Hashtable table = rm.getROIs();
+		final Hashtable<String, Roi> table = rm.getROIs();
 		final java.awt.List list = rm.getList();
 		final int roiCount = list.getItemCount();
 		final Roi[] rois = new Roi[roiCount];
 		for (int i = 0; i < roiCount; i++) {
 			final String label = list.getItem(i);
-			final Roi roi2 = (Roi) table.get(label);
+			final Roi roi2 = table.get(label);
 			if (roi2 == null) continue;
 			rois[i] = roi2;
 		}
@@ -123,73 +123,70 @@ public class FRAP_Profiler implements PlugInFilter, Measurements {
 		}
 
 		float timescale = 1;
-		if (y != null) {
-			final float[] x = new float[y.length];
+		final float[] x = new float[y.length];
 
-			for (int i = 0; i < x.length; i++) {
+		for (int i = 0; i < x.length; i++) {
 
-				if (cal.frameInterval == 0 || Double.isNaN(cal.frameInterval)) {
-					x[i] = ((i));
-				}
-				else {
-					x[i] = ((i) * (float) cal.frameInterval);
-					timescale = (float) cal.frameInterval;
-				}
+			if (cal.frameInterval == 0 || Double.isNaN(cal.frameInterval)) {
+				x[i] = ((i));
 			}
-
-			final PlotWindow pwF =
-				new PlotWindow("rawFRAP: " + imp.getTitle() + "-x" + r.x + ".y" + r.y +
-					".w" + r.width + ".h" + r.height, timeUnit, "Mean", x, y2);
-			pwF.addPoints(x, y3, PlotWindow.LINE);
-
-			final PlotWindow pw =
-				new PlotWindow("procFRAP: " + imp.getTitle() + "-x" + r.x + ".y" + r.y +
-					".w" + r.width + ".h" + r.height, timeUnit, "Mean", x, y);
-			double[] a = Tools.getMinMax(x);
-			final double xmin = a[0], xmax = a[1];
-			pwF.setLimits(xmin, xmax, yFmin, yFmax);
-			pwF.draw();
-			a = Tools.getMinMax(y);
-			final double ymin = a[0], ymax = a[1];
-			pw.setLimits(xmin, xmax, ymin, ymax);
-
-			// fit curve
-			int sliceMin = 0;
-			for (int i = 0; i < y.length; i++) {
-				if (y[i] == ymin) sliceMin = i + 1;
+			else {
+				x[i] = ((i) * (float) cal.frameInterval);
+				timescale = (float) cal.frameInterval;
 			}
-			final float[] f = new float[y.length - sliceMin];
-			final float[] x2 = new float[y.length - sliceMin];
-			final double[] fd = new double[y.length - sliceMin];
-			final double[] x2d = new double[y.length - sliceMin];
-			for (int i = 0; i < y.length - sliceMin; i++) {
-				f[i] = y[i + sliceMin];
-				fd[i] = f[i];
-				x2[i] = x[i] + sliceMin * timescale;
-				// x3[i]=x2[i]+(4*timescale );
-				x2d[i] = x2[i];
-				// IJ.log(i + "\t"+ f[i]);
-			}
-			final CurveFitter cf = new CurveFitter(x2d, fd);
-			cf.doFit(CurveFitter.EXP_RECOVERY);
-			final double[] p = cf.getParams();
-			// p[0]*(1-Math.exp(-p[1]*x))+p[2])
-			IJ.log("p[0]*(1-Math.exp(-p[1]*x)+p[2]):  " + df2.format(p[0]) + ";  " +
-				df2.format(p[1]) + ";  " + df2.format(p[2]));
-			double tmp = 0;
-			final float[] fit = new float[y.length];
-			for (int z = 0; z < x2.length; z++) {
-				tmp = x2[z] - p[2];
-				if (tmp < 0.001) tmp = 0.001;
-				fit[z] = (float) (p[0] * (1 - Math.exp(-p[1] * z)) + p[2]);
-			}
-
-			pw.setColor(Color.red);
-			pw.addPoints(x2, fit, PlotWindow.LINE);
-			pw.setColor(Color.black);
-			pw.draw();
-
 		}
+
+		final PlotWindow pwF =
+			new PlotWindow("rawFRAP: " + imp.getTitle() + "-x" + r.x + ".y" + r.y +
+				".w" + r.width + ".h" + r.height, timeUnit, "Mean", x, y2);
+		pwF.addPoints(x, y3, PlotWindow.LINE);
+
+		final PlotWindow pw =
+			new PlotWindow("procFRAP: " + imp.getTitle() + "-x" + r.x + ".y" + r.y +
+				".w" + r.width + ".h" + r.height, timeUnit, "Mean", x, y);
+		double[] a = Tools.getMinMax(x);
+		final double xmin = a[0], xmax = a[1];
+		pwF.setLimits(xmin, xmax, yFmin, yFmax);
+		pwF.draw();
+		a = Tools.getMinMax(y);
+		final double ymin = a[0], ymax = a[1];
+		pw.setLimits(xmin, xmax, ymin, ymax);
+
+		// fit curve
+		int sliceMin = 0;
+		for (int i = 0; i < y.length; i++) {
+			if (y[i] == ymin) sliceMin = i + 1;
+		}
+		final float[] f = new float[y.length - sliceMin];
+		final float[] x2 = new float[y.length - sliceMin];
+		final double[] fd = new double[y.length - sliceMin];
+		final double[] x2d = new double[y.length - sliceMin];
+		for (int i = 0; i < y.length - sliceMin; i++) {
+			f[i] = y[i + sliceMin];
+			fd[i] = f[i];
+			x2[i] = x[i] + sliceMin * timescale;
+			// x3[i]=x2[i]+(4*timescale );
+			x2d[i] = x2[i];
+			// IJ.log(i + "\t"+ f[i]);
+		}
+		final CurveFitter cf = new CurveFitter(x2d, fd);
+		cf.doFit(CurveFitter.EXP_RECOVERY);
+		final double[] p = cf.getParams();
+		// p[0]*(1-Math.exp(-p[1]*x))+p[2])
+		IJ.log("p[0]*(1-Math.exp(-p[1]*x)+p[2]):  " + df2.format(p[0]) + ";  " +
+			df2.format(p[1]) + ";  " + df2.format(p[2]));
+		double tmp = 0;
+		final float[] fit = new float[y.length];
+		for (int z = 0; z < x2.length; z++) {
+			tmp = x2[z] - p[2];
+			if (tmp < 0.001) tmp = 0.001;
+			fit[z] = (float) (p[0] * (1 - Math.exp(-p[1] * z)) + p[2]);
+		}
+
+		pw.setColor(Color.red);
+		pw.addPoints(x2, fit, PlotWindow.LINE);
+		pw.setColor(Color.black);
+		pw.draw();
 	}
 
 	float[] getZAxisProfile(final Roi roi, final Roi full,
