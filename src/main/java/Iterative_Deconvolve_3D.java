@@ -833,11 +833,6 @@ public class Iterative_Deconvolve_3D implements PlugIn {
 		return temp & 0x0000ffff;
 	}
 
-	private int bset(int x, final int bit) {
-		x |= (1 << bit);
-		return x;
-	}
-
 	static public void showAbout() {
 		IJ.showMessage("About Iterative Decon 3D ...",
 			"Iterative convolution and positive deconvolution\n" + "in 3D");
