@@ -95,6 +95,7 @@
 			<artifactId>bij</artifactId>
 		</dependency>
 
+		<!-- ImageJ dependencies -->
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
