@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>sc.fiji</groupId>
 		<artifactId>pom-fiji</artifactId>
-		<version>7.1.2</version>
+		<version>26.1.1</version>
 	</parent>
 
 	<artifactId>cookbook_</artifactId>
