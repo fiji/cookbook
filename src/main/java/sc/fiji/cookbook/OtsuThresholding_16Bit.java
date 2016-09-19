@@ -30,24 +30,13 @@ import ij.process.ImageProcessor;
 import ij.process.ShortProcessor;
 
 /**
- *  This algorithm is an implementation of Otsu thresholding technique 
- *  based on the minimization of inter-class variance [otsu79].
- *
- *  @Article{otsu79,
- *    author =       "N. Otsu",
- *    title =        "A threshold selection method from gray level
- *                    histograms",
- *    journal =      "{IEEE} Trans. Systems, Man and Cybernetics",
- *    year =         "1979",
- *    volume =       "9",
- *    pages =        "62--66",
- *    month =        mar,
- *    keywords =     "threshold selection",
- *    note =         "minimize inter class variance",
- *  }
- *  
- **/
-
+ * This algorithm is an implementation of Otsu thresholding technique based on
+ * the minimization of inter-class variance:
+ * <p>
+ * Otsu, Nobuyuki. "A threshold selection method from gray-level histograms."
+ * Automatica 11.285-296 (1975): 23-27.
+ * </p>
+ */
 public class OtsuThresholding_16Bit implements PlugInFilter {
     private int threshold;
     final static int HMIN = 0;

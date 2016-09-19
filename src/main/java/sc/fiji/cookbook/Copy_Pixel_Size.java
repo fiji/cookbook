@@ -10,7 +10,7 @@ import ij.plugin.PlugIn;
  * This plugin copies the calibration from one stack to a second stack. It can
  * be used after windows to stack and scale to regain pixel size information
  *
- * @author J. Anthony Parker, MD PhD <J.A.Parker@IEEE.org>
+ * @author J. Anthony Parker, MD PhD (J.A.Parker@IEEE.org)
  * @version 22November2001
  */
 

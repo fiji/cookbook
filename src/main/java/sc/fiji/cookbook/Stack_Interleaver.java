@@ -12,13 +12,12 @@ import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
 
 /**
- * Interleaves two stacks to create a new stack This plugin is modified from
- * Stack_Combiner (see Wayne Rasband)
+ * Interleaves two stacks to create a new stack. This plugin is modified from
+ * Stack_Combiner (see Wayne Rasband).
  * 
- * @author J. Anthony Parker, MD PhD <J.A.Parker@IEEE.org>
+ * @author J. Anthony Parker, MD PhD (J.A.Parker@IEEE.org)
  * @version 20September2001
  */
-
 public class Stack_Interleaver implements PlugIn {
 
 	ImagePlus imp1;

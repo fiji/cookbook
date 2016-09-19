@@ -12,16 +12,14 @@ import ij.process.ImageProcessor;
 /**
  * Enhancing the original program created by Jeffrey Kuhn. This one takes, in
  * addition to width and height and the option to have an oval ROI from the
- * original program, x & y coordinates, slice number, and the option to have the
- * x & y coordinates centered or in default top left corner of ROI. The original
+ * original program, x + y coordinates, slice number, and the option to have the
+ * x + y coordinates centered or in default top left corner of ROI. The original
  * creator is Jeffrey Kuhn, The University of Texas at Austin,
  * jkuhn@ccwf.cc.utexas.edu
  *
- * @author Anthony Padua
- * @author Duke University Medical Center, Department of Radiology
- * @author padua001@mc.duke.edu
+ * @author Anthony Padua (padua001@mc.duke.edu), Duke University Medical Center,
+ *         Department of Radiology
  */
-
 public class Specify_ROI implements PlugInFilter {
 
 	int iX;
