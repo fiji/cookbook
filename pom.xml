@@ -19,6 +19,10 @@
 	<url>http://imagej.net/Cookbook</url>
 	<inceptionYear>2013</inceptionYear>
 
+	<properties>
+		<package-name>sc.fiji.cookbook</package-name>
+	</properties>
+
 	<developers>
 		<developer>
 			<id>ctrueden</id>
