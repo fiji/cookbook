@@ -48,6 +48,7 @@ public class Adapative3DThreshold_ implements PlugInFilter {
 	private int height;
 	private int depth;
 	
+	@Override
 	public int setup(String arg, ImagePlus imp) {
 		imRef = imp;
 		
@@ -87,6 +88,7 @@ public class Adapative3DThreshold_ implements PlugInFilter {
 	}
 	
 	
+	@Override
 	public void run(ImageProcessor ip) {
 		
 		if(noGo) return;

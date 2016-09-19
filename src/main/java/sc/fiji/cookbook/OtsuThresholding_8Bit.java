@@ -51,12 +51,14 @@ public class OtsuThresholding_8Bit implements PlugInFilter {
     final static int HMIN = 0;
     final static int HMAX = 256;
 
+    @Override
     public int setup(String arg, ImagePlus imp) {
 	if (arg.equals("about"))
 	    {showAbout(); return DONE;}
 	return DOES_8G+DOES_STACKS+SUPPORTS_MASKING+NO_CHANGES;
     }
     
+    @Override
     public void run(ImageProcessor ip) {
 	boolean debug = false;
 	int intMax = (int)ip.getMax();

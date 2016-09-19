@@ -113,6 +113,7 @@ public class GrayLevelClass {
 	*/
     }
 
+    @Override
     public String toString() {
 	StringBuffer ret = new StringBuffer();
 	

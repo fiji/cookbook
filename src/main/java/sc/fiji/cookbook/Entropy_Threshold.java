@@ -16,6 +16,7 @@ public class Entropy_Threshold implements PlugInFilter {
  /*
   *
   */
+ @Override
  public int setup(String s, ImagePlus imagePlus) {
    return PlugInFilter.DOES_8G | PlugInFilter.DOES_STACKS;
  }
@@ -23,6 +24,7 @@ public class Entropy_Threshold implements PlugInFilter {
  /*
   *
   */
+ @Override
  public void run(ImageProcessor imageProcessor) {
    int[] hist = imageProcessor.getHistogram();
    int threshold = entropySplit(hist);

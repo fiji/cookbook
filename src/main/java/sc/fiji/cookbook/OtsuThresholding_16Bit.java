@@ -55,6 +55,7 @@ public class OtsuThresholding_16Bit implements PlugInFilter {
     static boolean is16bit = true;
     DecimalFormat df0 = new DecimalFormat("##0");
 	
+    @Override
     public int setup(String arg, ImagePlus imp) 
     	{
 	if (arg.equals("about"))
@@ -62,6 +63,7 @@ public class OtsuThresholding_16Bit implements PlugInFilter {
 	return DOES_16+DOES_STACKS+SUPPORTS_MASKING+NO_CHANGES;
   	}
     
+    @Override
     public void run(ImageProcessor ip)
 	 {
 	boolean debug = false;
