@@ -109,10 +109,12 @@ public class Nucleus_Counter implements PlugIn {
 
 		WindowManager.setCurrentWindow(winimp3);
 
-		if (threshIndex == 1 && imp1.getType() == ImagePlus.GRAY8) IJ
-			.run("OtsuThresholding 8Bit");
-		if (threshIndex == 1 && imp1.getType() == ImagePlus.GRAY16) IJ
-			.run("OtsuThresholding 16Bit");
+		if (threshIndex == 1 && imp1.getType() == ImagePlus.GRAY8) {
+			IJ.run("OtsuThresholding 8Bit");
+		}
+		if (threshIndex == 1 && imp1.getType() == ImagePlus.GRAY16) {
+			IJ.run("OtsuThresholding 16Bit");
+		}
 		if (threshIndex == 2) {
 			IJ.run("8-bit");
 			IJ.run("Entropy Threshold");
