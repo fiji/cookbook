@@ -1,5 +1,8 @@
 package sc.fiji.cookbook;
 
+import java.io.CharArrayWriter;
+import java.io.PrintWriter;
+
 import bijnum.BIJpca;
 import bijnum.BIJstats;
 import bijnum.BIJutil;
@@ -11,9 +14,6 @@ import ij.gui.PlotWindow;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
-
-import java.io.CharArrayWriter;
-import java.io.PrintWriter;
 
 /**
  * This class interfaces the VolumeJ package to a ImageJ plugin. Copyright (c)

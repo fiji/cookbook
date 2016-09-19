@@ -20,15 +20,12 @@
 
 package sc.fiji.cookbook;
 
-import ij.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.gui.NewImage;
 import ij.plugin.filter.PlugInFilter;
-import ij.process.*;
-import ij.gui.*;
-import ij.plugin.frame.PlugInFrame;
-
-import java.awt.*;
-import java.util.*;
-import java.lang.*;
+import ij.process.ByteProcessor;
+import ij.process.ImageProcessor;
 
 /**
  *  This algorithm is an implementation of Otsu thresholding technique 

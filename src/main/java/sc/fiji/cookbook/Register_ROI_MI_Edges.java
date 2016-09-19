@@ -1,11 +1,10 @@
 package sc.fiji.cookbook;
 
-import ij.IJ;
-import ij.process.ImageProcessor;
-
 import java.io.CharArrayWriter;
 import java.io.PrintWriter;
 
+import ij.IJ;
+import ij.process.ImageProcessor;
 import registration.RegisterMI;
 import volume.Hessian;
 

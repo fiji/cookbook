@@ -19,9 +19,7 @@
 
 package sc.fiji.cookbook;
 
-import java.util.*;
-import ij.*;
-import ij.process.*;
+import ij.process.ByteProcessor;
 
 /** 
  *  This class implements a class of pixels with basic statistical functions.

@@ -1,5 +1,7 @@
 package sc.fiji.cookbook;
 
+import java.awt.Color;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -8,8 +10,6 @@ import ij.gui.GenericDialog;
 import ij.gui.Toolbar;
 import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
-
-import java.awt.Color;
 
 /**
  * Interleaves two stacks to create a new stack This plugin is modified from

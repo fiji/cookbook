@@ -1,5 +1,10 @@
 package sc.fiji.cookbook;
 
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.text.DecimalFormat;
+import java.util.Hashtable;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -14,11 +19,6 @@ import ij.plugin.frame.RoiManager;
 import ij.process.ImageProcessor;
 import ij.process.ImageStatistics;
 import ij.util.Tools;
-
-import java.awt.Color;
-import java.awt.Rectangle;
-import java.text.DecimalFormat;
-import java.util.Hashtable;
 
 public class FRAP_Profiler implements PlugInFilter, Measurements {
 

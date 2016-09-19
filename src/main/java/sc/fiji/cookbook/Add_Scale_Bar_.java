@@ -1,5 +1,14 @@
 package sc.fiji.cookbook;
 
+import java.awt.Checkbox;
+import java.awt.Choice;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Rectangle;
+import java.awt.TextField;
+import java.awt.event.ItemEvent;
+import java.awt.event.TextEvent;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.Undo;
@@ -10,15 +19,6 @@ import ij.gui.Roi;
 import ij.measure.Calibration;
 import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
-
-import java.awt.Checkbox;
-import java.awt.Choice;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Rectangle;
-import java.awt.TextField;
-import java.awt.event.ItemEvent;
-import java.awt.event.TextEvent;
 
 /** This plugin implements the Analyze/Tools/Draw Scale Bar command. */
 public class Add_Scale_Bar_ implements PlugIn {

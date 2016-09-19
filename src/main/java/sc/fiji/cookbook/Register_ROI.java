@@ -1,5 +1,8 @@
 package sc.fiji.cookbook;
 
+import java.io.CharArrayWriter;
+import java.io.PrintWriter;
+
 import bijnum.BIJutil;
 import ij.IJ;
 import ij.ImagePlus;
@@ -7,10 +10,6 @@ import ij.ImageStack;
 import ij.gui.PlotWindow;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
-
-import java.io.CharArrayWriter;
-import java.io.PrintWriter;
-
 import registration.Register;
 import registration.RegisterFFT;
 import volume.Transformer;

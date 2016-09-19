@@ -1,9 +1,9 @@
 package sc.fiji.cookbook;
 
+import ij.IJ;
 import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
-import ij.*;
 /**
 * Automatic thresholding technique based on the entopy of the histogram.
 * See: P.K. Sahoo, S. Soltani, K.C. Wong and, Y.C. Chen "A Survey of

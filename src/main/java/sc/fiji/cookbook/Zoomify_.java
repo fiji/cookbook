@@ -1,5 +1,7 @@
 package sc.fiji.cookbook;
 
+import java.awt.Rectangle;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -7,8 +9,6 @@ import ij.WindowManager;
 import ij.gui.GenericDialog;
 import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
-
-import java.awt.Rectangle;
 
 public class Zoomify_ implements PlugIn {
 

@@ -1,13 +1,13 @@
 package sc.fiji.cookbook;
 
+import java.awt.Rectangle;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.gui.GenericDialog;
 import ij.measure.Calibration;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
-
-import java.awt.Rectangle;
 
 /**
  * Enhancing the original program created by Jeffrey Kuhn. This one takes, in

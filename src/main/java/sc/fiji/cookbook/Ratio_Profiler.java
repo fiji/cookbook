@@ -1,5 +1,10 @@
 package sc.fiji.cookbook;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Rectangle;
+import java.text.DecimalFormat;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -13,11 +18,6 @@ import ij.process.ImageProcessor;
 import ij.process.ImageStatistics;
 import ij.text.TextWindow;
 import ij.util.Tools;
-
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Rectangle;
-import java.text.DecimalFormat;
 
 public class Ratio_Profiler implements PlugInFilter, Measurements {
 

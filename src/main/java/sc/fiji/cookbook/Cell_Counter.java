@@ -1,5 +1,12 @@
 package sc.fiji.cookbook;
 
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+
 import ij.IJ;
 import ij.ImagePlus;
 import ij.ImageStack;
@@ -13,13 +20,6 @@ import ij.measure.ResultsTable;
 import ij.plugin.filter.Analyzer;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
-
-import java.awt.BorderLayout;
-import java.awt.Button;
-import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 
 public class Cell_Counter implements PlugInFilter {
 
