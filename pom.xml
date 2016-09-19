@@ -16,7 +16,8 @@
 
 	<name>Fiji Cookbook</name>
 	<description>A collection of plugins described in the Fiji Cookbook.</description>
-	<url>http://fiji.sc/Cookbook</url>
+	<url>http://imagej.net/Cookbook</url>
+	<inceptionYear>2013</inceptionYear>
 
 	<developers>
 		<developer>
@@ -24,41 +25,52 @@
 			<name>Curtis Rueden</name>
 			<url>http://imagej.net/User:Rueden</url>
 			<roles>
-				<role>architect</role>
-				<role>developer</role>
+				<role>founder</role>
+				<role>lead</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
 			</roles>
-		</developer>
-		<developer>
-			<id>dscho</id>
-			<name>Johannes Schindelin</name>
-			<email>johannes.schindelin@gmx.de</email>
-			<url>http://loci.wisc.edu/people/johannes-schindelin</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
-		</developer>
-		<developer>
-			<id>apal4</id>
-			<name>Aparna Pal</name>
-			<email>apal4@wisc.edu</email>
-			<url>http://loci.wisc.edu/people/aparna-pal</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>-6</timezone>
 		</developer>
 	</developers>
 	<contributors>
-		<contributor><name>Katie Hildebrand</name></contributor>
-		<contributor><name>Amanda MacAllister</name></contributor>
-		<contributor><name>Ruizhi "Ray" Liao</name></contributor>
-		<contributor><name>Gabby Campagnola</name></contributor>
+		<contributor>
+			<name>Johannes Schindelin</name>
+			<url>http://imagej.net/Users:Schindelin</url>
+			<properties><id>dscho</id></properties>
+			<roles><role>founder</role></roles>
+		</contributor>
+		<contributor>
+			<name>Tony Collins</name>
+			<roles><role>founder</role></roles>
+		</contributor>
+		<contributor>
+			<name>Aparna Pal</name>
+			<url>http://imagej.net/Users:Apal4</url>
+			<properties><id>apal4</id></properties>
+		</contributor>
+		<contributor>
+			<name>Katie Hildebrand</name>
+			<url>http://imagej.net/User:Khildebrand</url>
+		</contributor>
+		<contributor>
+			<name>Amanda MacAllister</name>
+			<url>http://imagej.net/User:Amacall</url>
+		</contributor>
+		<contributor>
+			<name>Ruizhi "Ray" Liao</name>
+			<url>http://imagej.net/User:Ruizhi</url>
+		</contributor>
+		<contributor>
+			<name>Gabby Campagnola</name>
+			<url>http://imagej.net/User:Gtcwildfire</url>
+		</contributor>
+		<contributor>
+			<name>Mark Hiner</name>
+			<url>http://imagej.net/Users:Hinerm</url>
+			<properties><id>hinerm</id></properties>
+		</contributor>
 	</contributors>
 
 	<scm>
