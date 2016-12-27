@@ -41,7 +41,7 @@
 	<contributors>
 		<contributor>
 			<name>Johannes Schindelin</name>
-			<url>http://imagej.net/Users:Schindelin</url>
+			<url>http://imagej.net/User:Schindelin</url>
 			<properties><id>dscho</id></properties>
 			<roles><role>founder</role></roles>
 		</contributor>
@@ -51,7 +51,7 @@
 		</contributor>
 		<contributor>
 			<name>Aparna Pal</name>
-			<url>http://imagej.net/Users:Apal4</url>
+			<url>http://imagej.net/User:Apal4</url>
 			<properties><id>apal4</id></properties>
 		</contributor>
 		<contributor>
@@ -72,7 +72,7 @@
 		</contributor>
 		<contributor>
 			<name>Mark Hiner</name>
-			<url>http://imagej.net/Users:Hinerm</url>
+			<url>http://imagej.net/User:Hinerm</url>
 			<properties><id>hinerm</id></properties>
 		</contributor>
 	</contributors>
