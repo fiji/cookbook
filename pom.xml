@@ -108,6 +108,9 @@
 		<package-name>sc.fiji.cookbook</package-name>
 		<license.copyrightOwners>Cookbook plugin developers.</license.copyrightOwners>
 		<license.licenseName>gpl_v2</license.licenseName>
+
+		<!-- NB: Deploy releases to the ImageJ Maven repository. -->
+		<releaseProfiles>deploy-to-imagej</releaseProfiles>
 	</properties>
 
 	<repositories>
